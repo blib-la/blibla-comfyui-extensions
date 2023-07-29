@@ -6,14 +6,16 @@ Extensions for ComfyUI
 1. Download the file `failfastSettings.js` and put it in `ComfyUI/web/extensions`
 2. Reload Browser
 
-![image](https://github.com/failfa-st/comfyui-extensions/assets/1148334/bc1a0bba-6757-4fd8-a77b-3381695138f8)
+
+![Screenshot 2023-07-30 004305](https://github.com/failfa-st/comfyui-extensions/assets/1148334/0ee37a68-10c5-437a-a887-7aea25fd9c3e)
 
 
 ## Settings 
 
 > Open settings to show options
 
-![image](https://github.com/failfa-st/comfyui-extensions/assets/1148334/2d60bbf1-88bb-40fe-af43-c20d033a3505)
+![Screenshot 2023-07-30 003310](https://github.com/failfa-st/comfyui-extensions/assets/1148334/e7bf8bbf-ac16-41ac-ad75-1e1d79e4e2c0)
+
 
 ### Options
 | Name               | default | description                      |
@@ -29,5 +31,5 @@ Extensions for ComfyUI
 
 > Click to pin all nodes
 
-![image](https://github.com/failfa-st/comfyui-extensions/assets/1148334/b2a51f9b-6026-4780-8ee0-2b792f80da69)
 
+![Screenshot 2023-07-30 003341](https://github.com/failfa-st/comfyui-extensions/assets/1148334/41ef4b70-2d32-4395-ac78-8daa544521fb)
