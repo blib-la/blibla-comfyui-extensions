@@ -355,15 +355,22 @@ const pinAllName = "Failfast.pinAll";
 const pinAll = {
   name: pinAllName,
   async setup(app) {
-    const button = document.createElement("button");
-    button.innerText = "Pin all Nodes";
+    const pinButton = document.createElement("button");
+    const unpinButton = document.createElement("button");
+    pinButton.innerText = "Pin all Nodes";
+    unpinButton.innerText = "Unpin all Nodes";
 
-    button.onclick = () => {
+    pinButton.onclick = () => {
       app.graph._nodes.forEach((node) => {
         node.flags.pinned = true;
       });
     };
-    app.ui.menuContainer.append(button);
+    unpinButton.onclick = () => {
+      app.graph._nodes.forEach((node) => {
+        node.flags.pinned = false;
+      });
+    };
+    app.ui.menuContainer.append(pinButton, unpinButton);
   },
 };
 app.registerExtension(pinAll);
