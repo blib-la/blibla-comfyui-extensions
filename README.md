@@ -31,5 +31,4 @@ Extensions for ComfyUI
 
 > Click to pin all nodes
 
-
-![Screenshot 2023-07-30 003341](https://github.com/failfa-st/comfyui-extensions/assets/1148334/41ef4b70-2d32-4395-ac78-8daa544521fb)
+![image](https://github.com/failfa-st/comfyui-extensions/assets/1148334/27c4c79c-2caf-40e9-b9f4-129456b460f0)
