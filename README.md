@@ -3,7 +3,7 @@ Extensions for ComfyUI
 
 ## Installation
 
-1. Download the file `failfastSettings.js` and put it in `ComfyUI/web/extensions`
+1. Download the file [`failfastSettings.js`](https://raw.githubusercontent.com/failfa-st/comfyui-extensions/main/failfastSettings.js) and put it in `ComfyUI/web/extensions`
 2. Reload Browser
 
 
