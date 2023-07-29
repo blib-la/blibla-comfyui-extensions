@@ -59,7 +59,6 @@ const renderModes = ["straight", "small curve", "curve"];
 const linkRenderMode = {
   name: linkRenderModeName,
   async setup(app) {
-    console.log(app);
     const store = new Store(linkRenderModeName, {
       links_render_mode: 2,
     });
