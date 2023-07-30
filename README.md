@@ -50,6 +50,13 @@ git pull
 
 ## Buttons:
 
-> Click to pin or unpin all nodes
+### Pin or Unpin all Nodes
 
 ![image](https://github.com/failfa-st/comfyui-extensions/assets/1148334/27c4c79c-2caf-40e9-b9f4-129456b460f0)
+
+### Rainbow colored nodes
+
+![image](https://github.com/failfa-st/failfast-comfyui-extensions/assets/1148334/21a5e26d-431c-48a1-bdbf-25a981ebe42e)
+
+![image](https://github.com/failfa-st/failfast-comfyui-extensions/assets/1148334/12cf5a67-3ea9-4fd4-bd42-9a60333b40da)
+
