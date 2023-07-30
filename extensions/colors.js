@@ -10,7 +10,6 @@
  * Discord: https://discord.com/invite/m3TBB9XEkb
  */
 import { app } from "../../../scripts/app.js";
-import { $el } from "../../../scripts/ui.js";
 
 function getColor(index, lengthOfItems, l = 0.5) {
   // Normalize the index value to be between 0 and 360 for full spectrum of hue
@@ -51,40 +50,69 @@ function hslToRgb(h, s, l) {
 function rgbToHex(r, g, b) {
   return "#" + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
 }
+
 /**
  * Colors
  */
 
-const connectionsWidthName = "Failfast.colors";
+const colorsName = "Failfast.colors";
 
 app.registerExtension({
-  name: connectionsWidthName,
+  name: colorsName,
+  async setup(app) {
+    app.graph._nodes.forEach((node) => {
+      node._bgcolor = node._bgcolor ?? node.bgcolor;
+      node._color = node._color ?? node.color;
+    });
+  },
   async init(app) {
-    const button = $el(
-      "button",
-      {
-        onclick() {
-          const nodes = [...app.graph._nodes].sort((a, b) => {
-            if (a.pos[1] > b.pos[1]) {
-              return 1;
-            }
-            if (a.pos[1] < b.pos[1]) {
-              return -1;
-            }
-            return a.pos[0] - b.pos[0];
-          });
+    // Cache the original colors
+    function rainbowify() {
+      const nodes = [...app.graph._nodes].sort((a, b) => {
+        if (a.pos[1] > b.pos[1]) {
+          return 1;
+        }
+        if (a.pos[1] < b.pos[1]) {
+          return -1;
+        }
+        return a.pos[0] - b.pos[0];
+      });
 
-          nodes.forEach((node, index) => {
-            node.bgcolor = getColor(index, nodes.length, 0.3);
-            node.color = getColor(index, nodes.length, 0.2);
-          });
-          app.graph.change();
-        },
+      nodes.forEach((node, index) => {
+        node.bgcolor = getColor(index, nodes.length, 0.3);
+        node.color = getColor(index, nodes.length, 0.2);
+      });
+      app.graph.change();
+    }
+    function unrainbowify() {
+      app.graph._nodes.forEach((node) => {
+        node.bgcolor = node._bgcolor;
+        node.color = node._color;
+      });
+      app.graph.change();
+    }
+
+    const afterChange = app.graph.afterChange;
+
+    app.ui.settings.addSetting({
+      id: colorsName,
+      name: "Rainbow nodes",
+      type: "boolean",
+      tooltip: "Always color nodes in  rainbow colors.",
+      defaultValue: false,
+      onChange(value) {
+        // If checked, modify the afterChange
+        // Otherwise revert
+        if (value) {
+          app.graph.afterChange = () => {
+            rainbowify();
+          };
+          rainbowify();
+        } else {
+          app.graph.afterChange = afterChange;
+          unrainbowify();
+        }
       },
-      "Rainbow Nodes",
-    );
-
-    // TODO: There's probably an internal mechanism to add buttons
-    app.ui.menuContainer.append(button);
+    });
   },
 });

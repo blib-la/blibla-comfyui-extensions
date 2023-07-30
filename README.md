@@ -10,9 +10,9 @@ Extensions for ComfyUI
 - [Update](#update)
 - [Settings](#settings)
   * [Options](#options)
+  * [Rainbow-colored nodes](#rainbow-colored-nodes)
 - [Buttons:](#buttons)
   * [Pin or Unpin all Nodes](#pin-or-unpin-all-nodes)
-  * [Rainbow colored nodes](#rainbow-colored-nodes)
 
 <!-- tocstop -->
 
@@ -50,27 +50,26 @@ git pull
 
 > Open settings to show options
 
-![image](https://github.com/failfa-st/failfast-comfyui-extensions/assets/1148334/0653b112-b0f3-40b6-a6d9-3c6e443d67a8)
+![image](https://github.com/failfa-st/failfast-comfyui-extensions/assets/1148334/ddd0485d-41d6-405b-80d5-6d4389138b7b)
 
 ### Options
 
-| Name               | default | description                     |
-|--------------------|---------|---------------------------------|
-| Links Render Mode  | `2`     | Render mode of connector lines  |
-| Force Snap to Grid | `false` | Always snap nodes to grid       |
+| Name               | default | description                      |
+|--------------------|---------|----------------------------------|
+| Links Render Mode  | `2`     | Render mode of connector lines   |
+| Force Snap to Grid | `false` | Always snap nodes to grid        |
 | Force Box Shape    | `false` | remove round corners permanently |
-| Render shadows     | `true`  | show/hide shadows               |
-| Connections Width  | `3`     | width of connector lines        |
-| Font size          | `10`    | font-size of textareas          |
+| Render shadows     | `true`  | show/hide shadows                |
+| Connections Width  | `3`     | width of connector lines         |
+| Font size          | `10`    | font-size of textareas           |
+| Rainbow Nodes      | `false` | Color nodes in rainbow colors    |
+
+### Rainbow-colored nodes
+
+![image](https://github.com/failfa-st/failfast-comfyui-extensions/assets/1148334/12cf5a67-3ea9-4fd4-bd42-9a60333b40da)
 
 ## Buttons:
 
 ### Pin or Unpin all Nodes
 
 ![image](https://github.com/failfa-st/comfyui-extensions/assets/1148334/27c4c79c-2caf-40e9-b9f4-129456b460f0)
-
-### Rainbow colored nodes
-
-![image](https://github.com/failfa-st/failfast-comfyui-extensions/assets/1148334/21a5e26d-431c-48a1-bdbf-25a981ebe42e)
-
-![image](https://github.com/failfa-st/failfast-comfyui-extensions/assets/1148334/12cf5a67-3ea9-4fd4-bd42-9a60333b40da)
