@@ -97,3 +97,15 @@ The title is case-insensitive
 ### Pin or Unpin all Nodes
 
 ![image](https://github.com/failfa-st/comfyui-extensions/assets/1148334/27c4c79c-2caf-40e9-b9f4-129456b460f0)
+
+
+## Single extensions
+
+Each extension is compatible to be used separately, so you don't have to load the entire collection
+
+Just copy the file in [`extensions`](/extensions) into the extensions folder of ComfyUI
+
+1. Download the file you need [for example linksRenderMode](https://raw.githubusercontent.com/failfa-st/failfast-comfyui-extensions/main/extensions/linksRenderMode.js)
+2. unzip the archive
+3. Copy to `path/to/ComfyUI/web/extensions`
+4. the folder structure should look like this: `path/to/ComfyUI/web/extensions/linksRenderMode.js`
