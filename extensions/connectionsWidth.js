@@ -28,7 +28,7 @@ app.registerExtension({
         min: 2,
         max: 8,
       },
-      tooltip: "The with of connector lines.",
+      tooltip: "The width of connector lines.",
       defaultValue: 3,
       onChange(value) {
         app.canvas.connections_width = +value;
