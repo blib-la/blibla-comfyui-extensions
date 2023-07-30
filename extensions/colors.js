@@ -181,6 +181,11 @@ function setColorMode(value, app) {
       break;
     default:
       app.graph.afterChange = afterChange;
+      app.graph._nodes.forEach((node) => {
+        node.bgcolor = node._bgcolor ?? node.bgcolor;
+        node.color = node._color ?? node.color;
+      });
+      app.graph.change();
       break;
   }
 }
@@ -194,9 +199,15 @@ app.registerExtension({
     const value = +(
       window.localStorage.getItem(`Comfy.Settings.${colorsName}`) ?? "0"
     );
+    app.graph._nodes.forEach((node) => {
+      node._bgcolor = node._bgcolor ?? node.bgcolor;
+      node._color = node._color ?? node.color;
+    });
     setColorMode(value, app);
   },
   loadedGraphNode(node, app) {
+    node._bgcolor = node._bgcolor ?? node.bgcolor;
+    node._color = node._color ?? node.color;
     if (!loading) {
       loading = true;
       setTimeout(function () {
