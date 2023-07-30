@@ -10,6 +10,7 @@ Extensions for ComfyUI
 - [Update](#update)
 - [Settings](#settings)
   * [Options](#options)
+  * [Link Render Mode](#link-render-mode)
   * [Colored nodes](#colored-nodes)
     + [Positive Negative](#positive-negative)
     + [Dynamic colors](#dynamic-colors)
@@ -59,7 +60,7 @@ git pull
 
 | Name               | default   | description                                                                          |
 |--------------------|-----------|--------------------------------------------------------------------------------------|
-| Links Render Mode  | `2`       | Render mode of connector lines                                                       |
+| Links Render Mode  | `curved`  | Render mode of connector lines (straight, angled, curved, hidden)                    |
 | Force Snap to Grid | `false`   | Always snap nodes to grid                                                            |
 | Force Box Shape    | `false`   | remove round corners permanently                                                     |
 | Render shadows     | `true`    | show/hide shadows                                                                    |
@@ -67,6 +68,17 @@ git pull
 | Font size          | `10`      | font-size of textareas                                                               |
 | Colored Nodes      | `default` | Color nodes in dynamic colors  (default, plain, by type, rainbow, positive negative) |
 | Batch resize       | `false`   | When multiple nodes are selected, they will all resize to the same size (sync)       |
+
+### Link Render Mode
+
+Choose between 4 modes
+
+- straight
+- angled
+- curved
+- hidden
+
+![image](https://github.com/ltdrdata/ComfyUI-Manager/assets/1148334/af4b05ab-33b8-4cce-be3b-59765b7ea5a6)
 
 ### Colored nodes
 
@@ -91,8 +103,7 @@ The title is case-insensitive
 
 **plain** | **by type** | **rainbow**
 
-![nodecolor](https://github.com/failfa-st/failfast-comfyui-extensions/assets/1148334/8d61883a-184a-4897-a216-01cb1b1e4038)
-
+![nodecolor2](https://github.com/ltdrdata/ComfyUI-Manager/assets/1148334/0a0b70f2-5ba7-4cca-b61f-8e776e555635)
 ## Buttons:
 
 ### Pin or Unpin all Nodes
