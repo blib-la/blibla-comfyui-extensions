@@ -21,7 +21,6 @@ const connectionsWidthName = "Failfast.textFields";
 app.registerExtension({
   name: connectionsWidthName,
   async init(app) {
-    console.log(app);
     const style = $el("style");
     document.body.append(style);
     app.ui.settings.addSetting({
