@@ -128,6 +128,8 @@ function colorByType(app) {
 
 function colorPositiveNegative(app) {
   app.graph._nodes.forEach((node) => {
+    // const onPropertyChanged = node.onPropertyChanged;
+    // node.onPropertyChanged = function () {};
     if (node.title.toLowerCase().includes("positive")) {
       const bgcolor = hslToHex(120 / 360, 0.4, 0.3);
       const color = hslToHex(120 / 360, 0.4, 0.2);
@@ -146,30 +148,34 @@ function colorPositiveNegative(app) {
 /**
  * Colors
  */
-
+let afterChange;
 function setColorMode(value, app) {
   switch (value) {
     case 1:
-      app.graph.afterChange = () => {
+      app.graph.afterChange = function () {
         uncolor(app);
+        return applyChanges?.apply(this, arguments);
       };
       uncolor(app);
       break;
     case 2:
-      app.graph.afterChange = () => {
+      app.graph.afterChange = function () {
         rainbowify(app);
+        return applyChanges?.apply(this, arguments);
       };
       rainbowify(app);
       break;
     case 3:
-      app.graph.afterChange = () => {
+      app.graph.afterChange = function () {
         colorByType(app);
+        return applyChanges?.apply(this, arguments);
       };
       colorByType(app);
       break;
     case 4:
-      app.graph.afterChange = () => {
+      app.graph.afterChange = function () {
         colorPositiveNegative(app);
+        return applyChanges?.apply(this, arguments);
       };
       colorPositiveNegative(app);
       break;
@@ -178,7 +184,6 @@ function setColorMode(value, app) {
       break;
   }
 }
-let afterChange;
 
 const colorModes = ["default", "plain", "rainbow", "type", "positive/negative"];
 const colorsName = "Failfast.colors";
