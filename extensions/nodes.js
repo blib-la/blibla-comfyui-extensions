@@ -9,7 +9,7 @@
  * GitHub: https://github.com/failfa-st
  * Discord: https://discord.com/invite/m3TBB9XEkb
  */
-import { app } from "../../../scripts/app.js";
+import { app } from "../scripts/app.js";
 
 /**
  * Nodes
@@ -33,14 +33,12 @@ app.registerExtension({
     });
   },
   async setup(app) {
-    console.log(app);
     app.graph._nodes.forEach((node) => {
       let active = JSON.parse(
         window.localStorage.getItem(`Comfy.Settings.${nodesName}`) ?? "false",
       );
       const onResize = node.onResize;
       node.onResize = function (size) {
-        console.log(active);
         if (active) {
           Array.from(store.stack)
             .filter((node_) => node_ !== node)

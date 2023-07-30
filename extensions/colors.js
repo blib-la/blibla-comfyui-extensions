@@ -9,8 +9,8 @@
  * GitHub: https://github.com/failfa-st
  * Discord: https://discord.com/invite/m3TBB9XEkb
  */
-import { app } from "../../../scripts/app.js";
-import { $el } from "../../../scripts/ui.js";
+import { app } from "../scripts/app.js";
+import { $el } from "../scripts/ui.js";
 
 function getColor(index, lengthOfItems, l = 0.5) {
   // Normalize the index value to be between 0 and 360 for full spectrum of hue
@@ -154,28 +154,28 @@ function setColorMode(value, app) {
     case 1:
       app.graph.afterChange = function () {
         uncolor(app);
-        return applyChanges?.apply(this, arguments);
+        return afterChange?.apply(this, arguments);
       };
       uncolor(app);
       break;
     case 2:
       app.graph.afterChange = function () {
         rainbowify(app);
-        return applyChanges?.apply(this, arguments);
+        return afterChange?.apply(this, arguments);
       };
       rainbowify(app);
       break;
     case 3:
       app.graph.afterChange = function () {
         colorByType(app);
-        return applyChanges?.apply(this, arguments);
+        return afterChange?.apply(this, arguments);
       };
       colorByType(app);
       break;
     case 4:
       app.graph.afterChange = function () {
         colorPositiveNegative(app);
-        return applyChanges?.apply(this, arguments);
+        return afterChange?.apply(this, arguments);
       };
       colorPositiveNegative(app);
       break;
