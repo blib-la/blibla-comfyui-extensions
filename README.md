@@ -20,7 +20,9 @@ git clone git@github.com:failfa-st/failfast-comfyui-extensions.git
 1. Download [this zip](https://github.com/failfa-st/failfast-comfyui-extensions/archive/refs/heads/main.zip)
 2. unzip the archive
 3. Copy to `path/to/ComfyUI/web/extensions`
-4. the folder stucture should look like this: `path/to/ComfyUI/web/extensions/failfast-comfyui-extensions`
+4. the folder structure should look like this: `path/to/ComfyUI/web/extensions/failfast-comfyui-extensions`
+
+![image](https://github.com/failfa-st/failfast-comfyui-extensions/assets/1148334/6d08fd63-5309-44f8-934a-e120a48c0798)
 
 ## Update
 
@@ -29,7 +31,6 @@ cd path/to/ComfyUI/web/extensions/failfast-comfyui-extensions
 git pull
 ```
 
-![image](https://github.com/failfa-st/comfyui-extensions/assets/1148334/6efb211a-3215-4fcb-89c5-89ff0a2ece63)
 
 ## Settings
 
