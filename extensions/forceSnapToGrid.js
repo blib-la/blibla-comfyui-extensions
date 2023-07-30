@@ -19,7 +19,7 @@ const forceSnapToGridName = "Failfast.forceSnapToGrid";
 
 app.registerExtension({
   name: forceSnapToGridName,
-  async setup(app) {
+  async init(app) {
     app.ui.settings.addSetting({
       id: forceSnapToGridName,
       name: "Force Snap to Grid",

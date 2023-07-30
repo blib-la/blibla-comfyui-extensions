@@ -22,7 +22,7 @@ const renderModes = ["straight", "small curve", "curve"];
 
 app.registerExtension({
   name: linksRenderModeName,
-  async setup(app) {
+  async init(app) {
     app.ui.settings.addSetting({
       id: linksRenderModeName,
       name: "Links Render Mode",

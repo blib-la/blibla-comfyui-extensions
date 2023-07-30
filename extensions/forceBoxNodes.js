@@ -19,7 +19,7 @@ const forceBoxName = "Failfast.forceBoxNodes";
 
 app.registerExtension({
   name: forceBoxName,
-  async setup(app) {
+  async init(app) {
     app.ui.settings.addSetting({
       id: forceBoxName,
       name: "Force Box Nodes",

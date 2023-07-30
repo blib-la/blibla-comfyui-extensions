@@ -19,7 +19,7 @@ const renderShadowsName = "Failfast.renderShadows";
 
 app.registerExtension({
   name: renderShadowsName,
-  async setup(app) {
+  async init(app) {
     app.ui.settings.addSetting({
       id: renderShadowsName,
       name: "Render Node shadows",

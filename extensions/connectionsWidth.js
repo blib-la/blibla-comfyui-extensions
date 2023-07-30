@@ -19,7 +19,7 @@ const connectionsWidthName = "Failfast.connectionsWidth";
 
 app.registerExtension({
   name: connectionsWidthName,
-  async setup(app) {
+  async init(app) {
     app.ui.settings.addSetting({
       id: connectionsWidthName,
       name: "Connectors Width",

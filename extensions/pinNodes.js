@@ -20,11 +20,11 @@ const pinNodesName = "Failfast.pinNodes";
 
 app.registerExtension({
   name: pinNodesName,
-  async setup(app) {
+  async init(app) {
     const pinButton = $el(
       "button",
       {
-        onClick() {
+        onclick() {
           app.graph._nodes.forEach((node) => {
             node.flags.pinned = true;
           });
@@ -35,7 +35,7 @@ app.registerExtension({
     const unpinButton = $el(
       "button",
       {
-        onClick() {
+        onclick() {
           app.graph._nodes.forEach((node) => {
             node.flags.pinned = false;
           });
