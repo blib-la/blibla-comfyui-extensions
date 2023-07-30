@@ -18,7 +18,7 @@ import { $el } from "../../../scripts/ui.js";
  */
 
 const linksRenderModeName = "Failfast.linksRenderMode";
-const renderModes = ["straight", "small curve", "curve"];
+const renderModes = ["straight", "small curve", "curve", "hidden"];
 
 app.registerExtension({
   name: linksRenderModeName,
