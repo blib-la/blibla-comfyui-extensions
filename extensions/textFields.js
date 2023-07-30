@@ -34,7 +34,6 @@ app.registerExtension({
       tooltip: "The size of the font in prompts.",
       defaultValue: 10,
       onChange(value) {
-        console.log(value);
         style.innerText = `.comfy-multiline-input {font-size: ${value}px}`;
       },
     });
