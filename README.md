@@ -10,7 +10,7 @@ Extensions for ComfyUI
 - [Update](#update)
 - [Settings](#settings)
   * [Options](#options)
-  * [Link Render Mode](#link-render-mode)
+  * [Links Render Mode](#links-render-mode)
   * [Colored nodes](#colored-nodes)
     + [Positive Negative](#positive-negative)
     + [Dynamic colors](#dynamic-colors)
@@ -69,7 +69,7 @@ git pull
 | Colored Nodes      | `default` | Color nodes in dynamic colors  (default, plain, by type, rainbow, positive negative) |
 | Batch resize       | `false`   | When multiple nodes are selected, they will all resize to the same size (sync)       |
 
-### Link Render Mode
+### Links Render Mode
 
 Choose between 4 modes
 
