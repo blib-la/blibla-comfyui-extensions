@@ -57,7 +57,6 @@ function hslToHex(h, s, l) {
 }
 
 function rainbowify(app) {
-  console.log("RAINBOW");
   // Sort by position on canvas
   const nodes = [...app.graph._nodes].sort((a, b) => {
     if (a.pos[1] > b.pos[1]) {
@@ -77,7 +76,6 @@ function rainbowify(app) {
 }
 
 function uncolor(app) {
-  console.log("UNCOLOR");
   app.graph._nodes.forEach((node) => {
     if (node.type.toLowerCase() === "note") {
       const [h, s, l] = colors.note;
@@ -122,9 +120,25 @@ function colorNode(node) {
   }
 }
 function colorByType(app) {
-  console.log("TYPE");
   app.graph._nodes.forEach((node) => {
     colorNode(node);
+  });
+  app.graph.change();
+}
+
+function colorPositiveNegative(app) {
+  app.graph._nodes.forEach((node) => {
+    if (node.title.toLowerCase().includes("positive")) {
+      const bgcolor = hslToHex(120 / 360, 0.4, 0.3);
+      const color = hslToHex(120 / 360, 0.4, 0.2);
+      node.bgcolor = bgcolor;
+      node.color = color;
+    } else if (node.title.toLowerCase().includes("negative")) {
+      const bgcolor = hslToHex(0, 0.4, 0.3);
+      const color = hslToHex(0, 0.4, 0.2);
+      node.bgcolor = bgcolor;
+      node.color = color;
+    }
   });
   app.graph.change();
 }
@@ -133,45 +147,51 @@ function colorByType(app) {
  * Colors
  */
 
-const colorModes = ["default", "plain", "rainbow", "type"];
+function setColorMode(value, app) {
+  switch (value) {
+    case 1:
+      app.graph.afterChange = () => {
+        uncolor(app);
+      };
+      uncolor(app);
+      break;
+    case 2:
+      app.graph.afterChange = () => {
+        rainbowify(app);
+      };
+      rainbowify(app);
+      break;
+    case 3:
+      app.graph.afterChange = () => {
+        colorByType(app);
+      };
+      colorByType(app);
+      break;
+    case 4:
+      app.graph.afterChange = () => {
+        colorPositiveNegative(app);
+      };
+      colorPositiveNegative(app);
+      break;
+    default:
+      app.graph.afterChange = afterChange;
+      break;
+  }
+}
+let afterChange;
+
+const colorModes = ["default", "plain", "rainbow", "type", "positive/negative"];
 const colorsName = "Failfast.colors";
 let loading = false;
 app.registerExtension({
   name: colorsName,
   async setup(app) {
-    console.log(app.graph._nodes.map((x) => x.type));
-    const afterChange = app.graph.afterChange;
-
     const value = +(
       window.localStorage.getItem(`Comfy.Settings.${colorsName}`) ?? "0"
     );
-    console.log(value);
-    switch (value) {
-      case 1:
-        app.graph.afterChange = () => {
-          uncolor(app);
-        };
-        uncolor(app);
-        break;
-      case 2:
-        app.graph.afterChange = () => {
-          rainbowify(app);
-        };
-        rainbowify(app);
-        break;
-      case 3:
-        app.graph.afterChange = () => {
-          colorByType(app);
-        };
-        colorByType(app);
-        break;
-      default:
-        app.graph.afterChange = afterChange;
-        break;
-    }
+    setColorMode(value, app);
   },
   loadedGraphNode(node, app) {
-    const afterChange = app.graph.afterChange;
     if (!loading) {
       loading = true;
       setTimeout(() => {
@@ -180,36 +200,12 @@ app.registerExtension({
         const value = +(
           window.localStorage.getItem(`Comfy.Settings.${colorsName}`) ?? "0"
         );
-        console.log(value);
-        switch (value) {
-          case 1:
-            app.graph.afterChange = () => {
-              uncolor(app);
-            };
-            uncolor(app);
-            break;
-          case 2:
-            app.graph.afterChange = () => {
-              rainbowify(app);
-            };
-            rainbowify(app);
-            break;
-          case 3:
-            app.graph.afterChange = () => {
-              colorByType(app);
-            };
-            colorByType(app);
-            break;
-          default:
-            app.graph.afterChange = afterChange;
-            break;
-        }
+        setColorMode(value, app);
       }, 500);
     }
   },
   async init(app) {
-    const afterChange = app.graph.afterChange;
-
+    afterChange = app.graph.afterChange;
     app.ui.settings.addSetting({
       id: colorsName,
       name: "Color Mode",
@@ -245,30 +241,7 @@ app.registerExtension({
       tooltip: "Automatic color modes for nodes.",
       defaultValue: 2,
       onChange(value) {
-        console.log(value);
-        switch (value) {
-          case 1:
-            app.graph.afterChange = () => {
-              uncolor(app);
-            };
-            uncolor(app);
-            break;
-          case 2:
-            app.graph.afterChange = () => {
-              rainbowify(app);
-            };
-            rainbowify(app);
-            break;
-          case 3:
-            app.graph.afterChange = () => {
-              colorByType(app);
-            };
-            colorByType(app);
-            break;
-          default:
-            app.graph.afterChange = afterChange;
-            break;
-        }
+        setColorMode(value, app);
       },
     });
   },

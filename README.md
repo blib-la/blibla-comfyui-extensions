@@ -11,6 +11,8 @@ Extensions for ComfyUI
 - [Settings](#settings)
   * [Options](#options)
   * [Colored nodes](#colored-nodes)
+    + [Positive Negative](#positive-negative)
+    + [Dynamic colors](#dynamic-colors)
 - [Buttons:](#buttons)
   * [Pin or Unpin all Nodes](#pin-or-unpin-all-nodes)
 
@@ -54,19 +56,36 @@ git pull
 
 ### Options
 
-| Name               | default   | description                                                       |
-|--------------------|-----------|-------------------------------------------------------------------|
-| Links Render Mode  | `2`       | Render mode of connector lines                                    |
-| Force Snap to Grid | `false`   | Always snap nodes to grid                                         |
-| Force Box Shape    | `false`   | remove round corners permanently                                  |
-| Render shadows     | `true`    | show/hide shadows                                                 |
-| Connections Width  | `3`       | width of connector lines                                          |
-| Font size          | `10`      | font-size of textareas                                            |
-| Rainbow Nodes      | `default` | Color nodes in rainbow colors  (default, plain, by type, rainbow) |
+| Name               | default   | description                                                                          |
+|--------------------|-----------|--------------------------------------------------------------------------------------|
+| Links Render Mode  | `2`       | Render mode of connector lines                                                       |
+| Force Snap to Grid | `false`   | Always snap nodes to grid                                                            |
+| Force Box Shape    | `false`   | remove round corners permanently                                                     |
+| Render shadows     | `true`    | show/hide shadows                                                                    |
+| Connections Width  | `3`       | width of connector lines                                                             |
+| Font size          | `10`      | font-size of textareas                                                               |
+| Colored Nodes      | `default` | Color nodes in dynamic colors  (default, plain, by type, rainbow, positive negative) |
 
 ### Colored nodes
 
 Automatically adjusts the colors of the nodes.
+
+**positive\negative**: Adjusts the color based on the title
+
+#### Positive Negative
+
+The title is case-insensitive
+
+- negative in title = red
+- positive in title = green
+
+![image](https://github.com/failfa-st/failfast-comfyui-extensions/assets/1148334/a1a366ab-7a7f-4d10-b752-7e313f0c7728)
+
+#### Dynamic colors
+
+- plain colors all nodes as grey except for "Note" (yellow)
+- by type colors a node by its type
+- rainbow colors each node in rainbow colors (top left to bottom right)
 
 **plain** | **by type** | **rainbow**
 
