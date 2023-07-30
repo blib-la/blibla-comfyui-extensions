@@ -15,6 +15,7 @@ Extensions for ComfyUI
     + [Dynamic colors](#dynamic-colors)
 - [Buttons:](#buttons)
   * [Pin or Unpin all Nodes](#pin-or-unpin-all-nodes)
+- [Single extensions](#single-extensions)
 
 <!-- tocstop -->
 
