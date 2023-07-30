@@ -43,8 +43,19 @@ app.registerExtension({
           Array.from(store.stack)
             .filter((node_) => node_ !== node)
             .forEach((node_) => {
-              node_.size[0] = size[0];
-              node_.size[1] = size[1];
+              if (app.shiftDown) {
+                const w =
+                  LiteGraph.CANVAS_GRID_SIZE *
+                  Math.round(size[0] / LiteGraph.CANVAS_GRID_SIZE);
+                const h =
+                  LiteGraph.CANVAS_GRID_SIZE *
+                  Math.round(size[1] / LiteGraph.CANVAS_GRID_SIZE);
+                node_.size[0] = w;
+                node_.size[1] = h;
+              } else {
+                node_.size[0] = size[0];
+                node_.size[1] = size[1];
+              }
             });
         }
         return onResize?.apply(this, arguments);
