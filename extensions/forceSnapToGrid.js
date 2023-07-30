@@ -5,7 +5,7 @@
  *
  * Visit https://github.com/failfa-st/failfast-comfyui-extensions for more info
  *
- * Hopmepage:  https://failfa.st
+ * Homepage:  https://failfa.st
  * GitHub: https://github.com/failfa-st
  * Discord: https://discord.com/invite/m3TBB9XEkb
  */
