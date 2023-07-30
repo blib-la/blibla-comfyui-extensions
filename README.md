@@ -107,6 +107,5 @@ Each extension is compatible to be used separately, so you don't have to load th
 Just copy the file in [`extensions`](/extensions) into the extensions folder of ComfyUI
 
 1. Download the file you need [for example linksRenderMode](https://raw.githubusercontent.com/failfa-st/failfast-comfyui-extensions/main/extensions/linksRenderMode.js)
-2. unzip the archive
-3. Copy to `path/to/ComfyUI/web/extensions`
-4. the folder structure should look like this: `path/to/ComfyUI/web/extensions/linksRenderMode.js`
+2. Copy to `path/to/ComfyUI/web/extensions`
+3. the folder structure should look like this: `path/to/ComfyUI/web/extensions/linksRenderMode.js`
