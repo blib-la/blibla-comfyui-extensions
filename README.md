@@ -10,7 +10,7 @@ Extensions for ComfyUI
 - [Update](#update)
 - [Settings](#settings)
   * [Options](#options)
-  * [Rainbow-colored nodes](#rainbow-colored-nodes)
+  * [Colored nodes](#colored-nodes)
 - [Buttons:](#buttons)
   * [Pin or Unpin all Nodes](#pin-or-unpin-all-nodes)
 
@@ -50,23 +50,27 @@ git pull
 
 > Open settings to show options
 
-![image](https://github.com/failfa-st/failfast-comfyui-extensions/assets/1148334/ddd0485d-41d6-405b-80d5-6d4389138b7b)
+![image](https://github.com/failfa-st/failfast-comfyui-extensions/assets/1148334/0ee163e3-8ce3-489c-ab03-ecef6112d09b)
 
 ### Options
 
-| Name               | default | description                      |
-|--------------------|---------|----------------------------------|
-| Links Render Mode  | `2`     | Render mode of connector lines   |
-| Force Snap to Grid | `false` | Always snap nodes to grid        |
-| Force Box Shape    | `false` | remove round corners permanently |
-| Render shadows     | `true`  | show/hide shadows                |
-| Connections Width  | `3`     | width of connector lines         |
-| Font size          | `10`    | font-size of textareas           |
-| Rainbow Nodes      | `false` | Color nodes in rainbow colors    |
+| Name               | default   | description                                                       |
+|--------------------|-----------|-------------------------------------------------------------------|
+| Links Render Mode  | `2`       | Render mode of connector lines                                    |
+| Force Snap to Grid | `false`   | Always snap nodes to grid                                         |
+| Force Box Shape    | `false`   | remove round corners permanently                                  |
+| Render shadows     | `true`    | show/hide shadows                                                 |
+| Connections Width  | `3`       | width of connector lines                                          |
+| Font size          | `10`      | font-size of textareas                                            |
+| Rainbow Nodes      | `default` | Color nodes in rainbow colors  (default, plain, by type, rainbow) |
 
-### Rainbow-colored nodes
+### Colored nodes
 
-![image](https://github.com/failfa-st/failfast-comfyui-extensions/assets/1148334/12cf5a67-3ea9-4fd4-bd42-9a60333b40da)
+Automatically adjusts the colors of the nodes.
+
+**plain** | **by type** | **rainbow**
+
+![nodecolor](https://github.com/failfa-st/failfast-comfyui-extensions/assets/1148334/8d61883a-184a-4897-a216-01cb1b1e4038)
 
 ## Buttons:
 

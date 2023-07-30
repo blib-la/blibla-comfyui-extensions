@@ -10,6 +10,7 @@
  * Discord: https://discord.com/invite/m3TBB9XEkb
  */
 import { app } from "../../../scripts/app.js";
+import { $el } from "../../../scripts/ui.js";
 
 function getColor(index, lengthOfItems, l = 0.5) {
   // Normalize the index value to be between 0 and 360 for full spectrum of hue
@@ -50,8 +51,13 @@ function hslToRgb(h, s, l) {
 function rgbToHex(r, g, b) {
   return "#" + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
 }
+function hslToHex(h, s, l) {
+  const [r, g, b] = hslToRgb(h, s, l);
+  return rgbToHex(r, g, b);
+}
 
 function rainbowify(app) {
+  console.log("RAINBOW");
   // Sort by position on canvas
   const nodes = [...app.graph._nodes].sort((a, b) => {
     if (a.pos[1] > b.pos[1]) {
@@ -70,10 +76,55 @@ function rainbowify(app) {
   app.graph.change();
 }
 
-function unrainbowify(app) {
+function uncolor(app) {
+  console.log("UNCOLOR");
   app.graph._nodes.forEach((node) => {
-    node.bgcolor = node._bgcolor;
-    node.color = node._color;
+    if (node.type.toLowerCase() === "note") {
+      const [h, s, l] = colors.note;
+      const bgcolor = hslToHex(h / 360, s, l);
+      const color = hslToHex(h / 360, s, l - 0.1);
+      node.bgcolor = bgcolor;
+      node.color = color;
+    } else {
+      node.bgcolor = hslToHex(0, 0, 0.3);
+      node.color = hslToHex(0, 0, 0.2);
+    }
+  });
+  app.graph.change();
+}
+
+const colors = {
+  loader: [0, 0.4, 0.3],
+  clip: [20, 0.4, 0.3],
+  note: [40, 0.4, 0.3],
+  sampler: [60, 0.4, 0.3],
+  controlnet: [80, 0.4, 0.3],
+  vae: [100, 0.4, 0.3],
+  conditioning: [120, 0.4, 0.3],
+  latent: [140, 0.4, 0.3],
+  mask: [160, 0.4, 0.3],
+  image: [180, 0.4, 0.3],
+  style: [200, 0.4, 0.3],
+  primitive: [220, 0.4, 0.3],
+  gligen: [240, 0.4, 0.3],
+};
+
+function colorNode(node) {
+  const colorRef = Object.entries(colors).find(([key]) => {
+    return node.type.toLowerCase().includes(key);
+  });
+  if (colorRef) {
+    const [h, s, l] = colorRef[1];
+    const bgcolor = hslToHex(h / 360, s, l);
+    const color = hslToHex(h / 360, s, l - 0.1);
+    node.bgcolor = bgcolor;
+    node.color = color;
+  }
+}
+function colorByType(app) {
+  console.log("TYPE");
+  app.graph._nodes.forEach((node) => {
+    colorNode(node);
   });
   app.graph.change();
 }
@@ -82,32 +133,78 @@ function unrainbowify(app) {
  * Colors
  */
 
+const colorModes = ["default", "plain", "rainbow", "type"];
 const colorsName = "Failfast.colors";
-
+let loading = false;
 app.registerExtension({
   name: colorsName,
   async setup(app) {
-    app.graph._nodes.forEach((node) => {
-      // Cache the original colors
-      node._bgcolor = node._bgcolor ?? node.bgcolor;
-      node._color = node._color ?? node.color;
-    });
-    const state = JSON.parse(
-      window.localStorage.getItem("Comfy.Settings.Failfast.colors") ?? "false",
+    console.log(app.graph._nodes.map((x) => x.type));
+    const afterChange = app.graph.afterChange;
+
+    const value = +(
+      window.localStorage.getItem(`Comfy.Settings.${colorsName}`) ?? "0"
     );
-    if (state) {
-      rainbowify(app);
+    console.log(value);
+    switch (value) {
+      case 1:
+        app.graph.afterChange = () => {
+          uncolor(app);
+        };
+        uncolor(app);
+        break;
+      case 2:
+        app.graph.afterChange = () => {
+          rainbowify(app);
+        };
+        rainbowify(app);
+        break;
+      case 3:
+        app.graph.afterChange = () => {
+          colorByType(app);
+        };
+        colorByType(app);
+        break;
+      default:
+        app.graph.afterChange = afterChange;
+        break;
     }
   },
   loadedGraphNode(node, app) {
-    // Cache the original colors
-    node._bgcolor = node._bgcolor ?? node.bgcolor;
-    node._color = node._color ?? node.color;
-    const state = JSON.parse(
-      window.localStorage.getItem("Comfy.Settings.Failfast.colors") ?? "false",
-    );
-    if (state) {
-      rainbowify(app);
+    const afterChange = app.graph.afterChange;
+    if (!loading) {
+      loading = true;
+      setTimeout(() => {
+        loading = false;
+
+        const value = +(
+          window.localStorage.getItem(`Comfy.Settings.${colorsName}`) ?? "0"
+        );
+        console.log(value);
+        switch (value) {
+          case 1:
+            app.graph.afterChange = () => {
+              uncolor(app);
+            };
+            uncolor(app);
+            break;
+          case 2:
+            app.graph.afterChange = () => {
+              rainbowify(app);
+            };
+            rainbowify(app);
+            break;
+          case 3:
+            app.graph.afterChange = () => {
+              colorByType(app);
+            };
+            colorByType(app);
+            break;
+          default:
+            app.graph.afterChange = afterChange;
+            break;
+        }
+      }, 500);
     }
   },
   async init(app) {
@@ -115,21 +212,62 @@ app.registerExtension({
 
     app.ui.settings.addSetting({
       id: colorsName,
-      name: "Rainbow nodes",
-      type: "boolean",
-      tooltip: "Always color nodes in  rainbow colors.",
-      defaultValue: false,
+      name: "Color Mode",
+      type(name, setter, value) {
+        return $el("tr", [
+          $el("td", [
+            $el("label", {
+              for: colorsName.replaceAll(".", "-"),
+              textContent: "Color Mode",
+            }),
+          ]),
+
+          $el("td", [
+            $el(
+              "select",
+              {
+                id: colorsName.replaceAll(".", "-"),
+                onchange: (event) => {
+                  setter(+event.target.value);
+                },
+              },
+              colorModes.map((mode, index) => {
+                return $el("option", {
+                  textContent: mode,
+                  value: index,
+                  selected: index === +value,
+                });
+              }),
+            ),
+          ]),
+        ]);
+      },
+      tooltip: "Automatic color modes for nodes.",
+      defaultValue: 2,
       onChange(value) {
-        // If checked, modify the afterChange
-        // Otherwise revert
-        if (value) {
-          app.graph.afterChange = () => {
+        console.log(value);
+        switch (value) {
+          case 1:
+            app.graph.afterChange = () => {
+              uncolor(app);
+            };
+            uncolor(app);
+            break;
+          case 2:
+            app.graph.afterChange = () => {
+              rainbowify(app);
+            };
             rainbowify(app);
-          };
-          rainbowify(app);
-        } else {
-          app.graph.afterChange = afterChange;
-          unrainbowify(app);
+            break;
+          case 3:
+            app.graph.afterChange = () => {
+              colorByType(app);
+            };
+            colorByType(app);
+            break;
+          default:
+            app.graph.afterChange = afterChange;
+            break;
         }
       },
     });

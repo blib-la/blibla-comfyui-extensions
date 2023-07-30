@@ -41,7 +41,7 @@ app.registerExtension({
               {
                 id: linksRenderModeName.replaceAll(".", "-"),
                 onchange: (event) => {
-                  setter(event.target.value);
+                  setter(+event.target.value);
                 },
               },
               renderModes.map((mode, index) => {
@@ -58,7 +58,7 @@ app.registerExtension({
       tooltip: "Render mode of connector lines",
       defaultValue: 2,
       onChange(value) {
-        app.canvas.links_render_mode = value;
+        app.canvas.links_render_mode = +value;
         app.graph.change();
       },
     });
