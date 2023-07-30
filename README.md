@@ -2,6 +2,20 @@
 
 Extensions for ComfyUI
 
+<!-- toc -->
+
+- [Installation](#installation)
+  * [Clone repo (option 1)](#clone-repo-option-1)
+  * [Download (option 2)](#download-option-2)
+- [Update](#update)
+- [Settings](#settings)
+  * [Options](#options)
+- [Buttons:](#buttons)
+  * [Pin or Unpin all Nodes](#pin-or-unpin-all-nodes)
+  * [Rainbow colored nodes](#rainbow-colored-nodes)
+
+<!-- tocstop -->
+
 ## Installation
 
 > Options:  
@@ -59,4 +73,3 @@ git pull
 ![image](https://github.com/failfa-st/failfast-comfyui-extensions/assets/1148334/21a5e26d-431c-48a1-bdbf-25a981ebe42e)
 
 ![image](https://github.com/failfa-st/failfast-comfyui-extensions/assets/1148334/12cf5a67-3ea9-4fd4-bd42-9a60333b40da)
-
