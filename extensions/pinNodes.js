@@ -44,6 +44,7 @@ app.registerExtension({
       "Unpin all Nodes",
     );
 
+    // TODO: There's probably an internal mechanism to add buttons
     app.ui.menuContainer.append(pinButton, unpinButton);
   },
 });
