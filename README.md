@@ -50,17 +50,18 @@ git pull
 
 > Open settings to show options
 
-![image](https://github.com/failfa-st/comfyui-extensions/assets/1148334/6efb211a-3215-4fcb-89c5-89ff0a2ece63)
+![image](https://github.com/failfa-st/failfast-comfyui-extensions/assets/1148334/0653b112-b0f3-40b6-a6d9-3c6e443d67a8)
 
 ### Options
 
-| Name               | default | description                      |
-| ------------------ | ------- | -------------------------------- |
-| Links Render Mode  | `2`     | Render mode of connector lines   |
-| Force Snap to Grid | `false` | Always snap nodes to grid        |
+| Name               | default | description                     |
+|--------------------|---------|---------------------------------|
+| Links Render Mode  | `2`     | Render mode of connector lines  |
+| Force Snap to Grid | `false` | Always snap nodes to grid       |
 | Force Box Shape    | `false` | remove round corners permanently |
-| Render shadows     | `true`  | show/hide shadows                |
-| Connections Width  | `3`     | width of connector lines         |
+| Render shadows     | `true`  | show/hide shadows               |
+| Connections Width  | `3`     | width of connector lines        |
+| Font size          | `10`    | font-size of textareas          |
 
 ## Buttons:
 
