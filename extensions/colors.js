@@ -51,6 +51,33 @@ function rgbToHex(r, g, b) {
   return "#" + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
 }
 
+function rainbowify(app) {
+  // Sort by position on canvas
+  const nodes = [...app.graph._nodes].sort((a, b) => {
+    if (a.pos[1] > b.pos[1]) {
+      return 1;
+    }
+    if (a.pos[1] < b.pos[1]) {
+      return -1;
+    }
+    return a.pos[0] - b.pos[0];
+  });
+
+  nodes.forEach((node, index) => {
+    node.bgcolor = getColor(index, nodes.length, 0.3);
+    node.color = getColor(index, nodes.length, 0.2);
+  });
+  app.graph.change();
+}
+
+function unrainbowify(app) {
+  app.graph._nodes.forEach((node) => {
+    node.bgcolor = node._bgcolor;
+    node.color = node._color;
+  });
+  app.graph.change();
+}
+
 /**
  * Colors
  */
@@ -61,37 +88,29 @@ app.registerExtension({
   name: colorsName,
   async setup(app) {
     app.graph._nodes.forEach((node) => {
+      // Cache the original colors
       node._bgcolor = node._bgcolor ?? node.bgcolor;
       node._color = node._color ?? node.color;
     });
+    const state = JSON.parse(
+      window.localStorage.getItem("Comfy.Settings.Failfast.colors") ?? "false",
+    );
+    if (state) {
+      rainbowify(app);
+    }
+  },
+  loadedGraphNode(node, app) {
+    // Cache the original colors
+    node._bgcolor = node._bgcolor ?? node.bgcolor;
+    node._color = node._color ?? node.color;
+    const state = JSON.parse(
+      window.localStorage.getItem("Comfy.Settings.Failfast.colors") ?? "false",
+    );
+    if (state) {
+      rainbowify(app);
+    }
   },
   async init(app) {
-    // Cache the original colors
-    function rainbowify() {
-      const nodes = [...app.graph._nodes].sort((a, b) => {
-        if (a.pos[1] > b.pos[1]) {
-          return 1;
-        }
-        if (a.pos[1] < b.pos[1]) {
-          return -1;
-        }
-        return a.pos[0] - b.pos[0];
-      });
-
-      nodes.forEach((node, index) => {
-        node.bgcolor = getColor(index, nodes.length, 0.3);
-        node.color = getColor(index, nodes.length, 0.2);
-      });
-      app.graph.change();
-    }
-    function unrainbowify() {
-      app.graph._nodes.forEach((node) => {
-        node.bgcolor = node._bgcolor;
-        node.color = node._color;
-      });
-      app.graph.change();
-    }
-
     const afterChange = app.graph.afterChange;
 
     app.ui.settings.addSetting({
@@ -105,12 +124,12 @@ app.registerExtension({
         // Otherwise revert
         if (value) {
           app.graph.afterChange = () => {
-            rainbowify();
+            rainbowify(app);
           };
-          rainbowify();
+          rainbowify(app);
         } else {
           app.graph.afterChange = afterChange;
-          unrainbowify();
+          unrainbowify(app);
         }
       },
     });
