@@ -14,7 +14,7 @@ Extensions for ComfyUI
 
 > Open settings to show options
 
-![Screenshot 2023-07-30 003310](https://github.com/failfa-st/comfyui-extensions/assets/1148334/e7bf8bbf-ac16-41ac-ad75-1e1d79e4e2c0)
+![image](https://github.com/failfa-st/comfyui-extensions/assets/1148334/6efb211a-3215-4fcb-89c5-89ff0a2ece63)
 
 
 ### Options
@@ -29,6 +29,6 @@ Extensions for ComfyUI
 
 ## Buttons:
 
-> Click to pin all nodes
+> Click to pin or unpin all nodes
 
 ![image](https://github.com/failfa-st/comfyui-extensions/assets/1148334/27c4c79c-2caf-40e9-b9f4-129456b460f0)
