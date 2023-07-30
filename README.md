@@ -52,7 +52,7 @@ git pull
 
 > Open settings to show options
 
-![image](https://github.com/failfa-st/failfast-comfyui-extensions/assets/1148334/0ee163e3-8ce3-489c-ab03-ecef6112d09b)
+![image](https://github.com/failfa-st/failfast-comfyui-extensions/assets/1148334/429a51ca-3b4e-49f2-ad59-85e4b1cda403)
 
 ### Options
 
@@ -65,6 +65,7 @@ git pull
 | Connections Width  | `3`       | width of connector lines                                                             |
 | Font size          | `10`      | font-size of textareas                                                               |
 | Colored Nodes      | `default` | Color nodes in dynamic colors  (default, plain, by type, rainbow, positive negative) |
+| Batch resize       | `false`   | When multiple nodes are selected, they will all resize to the same size (sync)       |
 
 ### Colored nodes
 
