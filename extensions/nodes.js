@@ -33,7 +33,7 @@ app.registerExtension({
     });
   },
   async setup(app) {
-    app.graph._nodes.forEach((node) => {
+    app.graph._nodes.forEach(function (node) {
       let active = JSON.parse(
         window.localStorage.getItem(`Comfy.Settings.${nodesName}`) ?? "false",
       );

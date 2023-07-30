@@ -199,7 +199,7 @@ app.registerExtension({
   loadedGraphNode(node, app) {
     if (!loading) {
       loading = true;
-      setTimeout(() => {
+      setTimeout(function () {
         loading = false;
 
         const value = +(
