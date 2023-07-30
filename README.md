@@ -7,7 +7,7 @@ Extensions for ComfyUI
 2. Reload Browser
 
 
-![Screenshot 2023-07-30 004305](https://github.com/failfa-st/comfyui-extensions/assets/1148334/0ee37a68-10c5-437a-a887-7aea25fd9c3e)
+![image](https://github.com/failfa-st/failfast-comfyui-extensions/assets/1148334/6d08fd63-5309-44f8-934a-e120a48c0798)
 
 
 ## Settings 
