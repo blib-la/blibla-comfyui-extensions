@@ -10,7 +10,6 @@
  * Discord: https://discord.com/invite/m3TBB9XEkb
  */
 import { app } from "../scripts/app.js";
-import { $el } from "../scripts/ui.js";
 
 /**
  * Render Shadow
@@ -20,7 +19,7 @@ const groupsName = "Failfast.groups";
 
 app.registerExtension({
   name: groupsName,
-  async setup(app) {
+  async setup() {
     const getGroupMenuOptions = LGraphCanvas.prototype.getGroupMenuOptions;
     let move = null;
     LGraphCanvas.prototype.getGroupMenuOptions = function (group) {
