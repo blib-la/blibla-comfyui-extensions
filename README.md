@@ -114,6 +114,9 @@ Colors a node depending on the node title (case-insensitive).
 **Groups**
 
 - Edit group > Color > Custom
+- Edit group > freeze/unfreeze (pins group and child nodes)
+
+![image](https://github.com/failfa-st/hyv/assets/1148334/7558fcfb-1733-4d78-904b-50891f29fa68)
 
 **Screenshot from Nodes (similar for Groups)**  
 
