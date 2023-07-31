@@ -56,6 +56,44 @@ function hslToHex(h, s, l) {
   return rgbToHex(r, g, b);
 }
 
+function shadeHexColor(hex, amount = -0.2) {
+  // Remove the # symbol if it exists
+  if (hex.startsWith("#")) {
+    hex = hex.slice(1);
+  }
+
+  // Convert the hex values to decimal (base 10) integers
+  let r = parseInt(hex.slice(0, 2), 16);
+  let g = parseInt(hex.slice(2, 4), 16);
+  let b = parseInt(hex.slice(4, 6), 16);
+
+  // Apply the shade amount to each RGB component
+  r = Math.max(0, Math.min(255, r + amount * 100));
+  g = Math.max(0, Math.min(255, g + amount * 100));
+  b = Math.max(0, Math.min(255, b + amount * 100));
+
+  // Convert the updated RGB values back to HEX
+  return rgbToHex(r, g, b);
+}
+
+function getContrastColor(hexColor) {
+  // Remove the # symbol if it exists
+  if (hexColor.startsWith("#")) {
+    hexColor = hexColor.slice(1);
+  }
+
+  // Convert the hex values to decimal (base 10) integers
+  const r = parseInt(hexColor.slice(0, 2), 16) / 255;
+  const g = parseInt(hexColor.slice(2, 4), 16) / 255;
+  const b = parseInt(hexColor.slice(4, 6), 16) / 255;
+
+  // Calculate the relative luminance
+  const L = 0.2126 * r + 0.7152 * g + 0.0722 * b;
+
+  // Use the contrast ratio to determine the text color
+  return L > 0.179 ? "#000000" : "#FFFFFF";
+}
+
 function rainbowify(app) {
   // Sort by position on canvas
   const nodes = [...app.graph._nodes].sort((a, b) => {
@@ -70,9 +108,10 @@ function rainbowify(app) {
 
   nodes.forEach((node, index) => {
     node.bgcolor = getColor(index, nodes.length, 0.3);
-    node.color = getColor(index, nodes.length, 0.2);
+    node.color = shadeHexColor(node.bgcolor);
+    node.setDirtyCanvas(true, true);
   });
-  app.graph.change();
+  // app.graph.change();
 }
 
 function uncolor(app) {
@@ -80,15 +119,14 @@ function uncolor(app) {
     if (node.type.toLowerCase() === "note") {
       const [h, s, l] = colors.note;
       const bgcolor = hslToHex(h / 360, s, l);
-      const color = hslToHex(h / 360, s, l - 0.1);
       node.bgcolor = bgcolor;
-      node.color = color;
+      node.color = shadeHexColor(node.bgcolor);
     } else {
       node.bgcolor = hslToHex(0, 0, 0.3);
-      node.color = hslToHex(0, 0, 0.2);
+      node.color = shadeHexColor(node.bgcolor);
     }
+    node.setDirtyCanvas(true, true);
   });
-  app.graph.change();
 }
 
 const colors = {
@@ -114,16 +152,15 @@ function colorNode(node) {
   if (colorRef) {
     const [h, s, l] = colorRef[1];
     const bgcolor = hslToHex(h / 360, s, l);
-    const color = hslToHex(h / 360, s, l - 0.1);
     node.bgcolor = bgcolor;
-    node.color = color;
+    node.color = shadeHexColor(node.bgcolor);
   }
 }
 function colorByType(app) {
   app.graph._nodes.forEach((node) => {
     colorNode(node);
+    node.setDirtyCanvas(true, true);
   });
-  app.graph.change();
 }
 
 function colorPositiveNegative(app) {
@@ -132,17 +169,15 @@ function colorPositiveNegative(app) {
     // node.onPropertyChanged = function () {};
     if (node.title.toLowerCase().includes("positive")) {
       const bgcolor = hslToHex(120 / 360, 0.4, 0.3);
-      const color = hslToHex(120 / 360, 0.4, 0.2);
       node.bgcolor = bgcolor;
-      node.color = color;
+      node.color = shadeHexColor(node.bgcolor);
     } else if (node.title.toLowerCase().includes("negative")) {
       const bgcolor = hslToHex(0, 0.4, 0.3);
-      const color = hslToHex(0, 0.4, 0.2);
       node.bgcolor = bgcolor;
-      node.color = color;
+      node.color = shadeHexColor(node.bgcolor);
     }
+    node.setDirtyCanvas(true, true);
   });
-  app.graph.change();
 }
 
 /**
@@ -184,8 +219,8 @@ function setColorMode(value, app) {
       app.graph._nodes.forEach((node) => {
         node.bgcolor = node._bgcolor ?? node.bgcolor;
         node.color = node._color ?? node.color;
+        node.setDirtyCanvas(true, true);
       });
-      app.graph.change();
       break;
   }
 }
@@ -222,6 +257,45 @@ app.registerExtension({
   },
   async init(app) {
     afterChange = app.graph.afterChange;
+    const onMenuNodeColors = LGraphCanvas.onMenuNodeColors;
+    LGraphCanvas.onMenuNodeColors = function (value, options, e, menu, node) {
+      const response = onMenuNodeColors.apply(this, arguments);
+      const menuRoot = menu.current_submenu.root;
+      menuRoot.append(
+        $el("div.litemenu-entry.submenu", [
+          $el(
+            "label",
+            {
+              style: {
+                position: "relative",
+                overflow: "hidden",
+                display: "block",
+                paddingLeft: "4px",
+                borderLeft: "8px solid #222",
+              },
+            },
+            [
+              "Custom",
+              $el("input", {
+                type: "color",
+                style: {
+                  position: "absolute",
+                  right: "200%",
+                },
+                oninput(event) {
+                  node.bgcolor = event.target.value;
+                  node.color = shadeHexColor(node.bgcolor);
+                  // TODO: check if we can adjust this
+                  // const textColor = getContrastColor(node.bgcolor);
+                  node.setDirtyCanvas(true, true);
+                },
+              }),
+            ],
+          ),
+        ]),
+      );
+      return response;
+    };
     app.ui.settings.addSetting({
       id: colorsName,
       name: "Color Mode",

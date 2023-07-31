@@ -49,7 +49,6 @@ cd path/to/ComfyUI/web/extensions/failfast-comfyui-extensions
 git pull
 ```
 
-
 ## Settings
 
 > Open settings to show options
@@ -86,6 +85,12 @@ Automatically adjusts the colors of the nodes.
 
 **positive\negative**: Adjusts the color based on the title
 
+
+#### Default
+
+A Menu option for node colors has been added. It only works in default mode
+
+![image](https://github.com/failfa-st/failfast-comfyui-extensions/assets/1148334/657d1a6c-d4d9-4091-9a35-16fa9ca50489)
 #### Positive Negative
 
 The title is case-insensitive
