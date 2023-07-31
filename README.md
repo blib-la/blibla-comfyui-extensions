@@ -15,6 +15,7 @@ Extensions for ComfyUI
     + [Positive Negative](#positive-negative)
     + [Dynamic colors](#dynamic-colors)
 - [Context Menu:](#context-menu)
+  * [Freeze or unfreeze Group](#freeze-or-unfreeze-group)
   * [Pin or Unpin all Nodes](#pin-or-unpin-all-nodes)
   * [Arrange all nodes](#arrange-all-nodes)
 - [Single extensions](#single-extensions)
@@ -132,13 +133,17 @@ Colors a node depending on the node title (case-insensitive).
 
 ![image](https://github.com/failfa-st/hyv/assets/1148334/4ba7027e-d8ab-420c-911a-0a02987d3ff9)
 
+### Freeze or unfreeze Group
+
+Locks or unlocks a group and all child Nodes. New Nodes will not be affected.
+
 ### Pin or Unpin all Nodes
 
-Locks or unlocks all nodes on the canvas. New nodes will not be affected.
+Locks or unlocks all nodes on the canvas. New Nodes will not be affected.
 
 ### Arrange all nodes
 
-Arranges all nodes in a vertical or horizontal layout.
+Arranges all Nodes in a vertical or horizontal layout.
 
 **Vertical**
 
