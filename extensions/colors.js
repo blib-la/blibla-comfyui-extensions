@@ -278,6 +278,7 @@ app.registerExtension({
     const onMenuNodeColors = LGraphCanvas.onMenuNodeColors;
     LGraphCanvas.onMenuNodeColors = function (value, options, e, menu, node) {
       const response = onMenuNodeColors.apply(this, arguments);
+      console.log(node);
       const menuRoot = menu.current_submenu.root;
       menuRoot.append(
         $el("div.litemenu-entry.submenu", [
@@ -304,9 +305,7 @@ app.registerExtension({
                   node.bgcolor = event.target.value;
                   node.color = shadeHexColor(node.bgcolor);
                   // TODO: check if we can adjust this
-                  // The method described in the docs does not work
-                  // https://github.com/jagenjo/litegraph.js/tree/master/guides#custom-node-appearance
-                  // node.text_color = getContrastColor(node.bgcolor);
+                  // node.title_color = getContrastColor(node.bgcolor);
 
                   node.setDirtyCanvas(true, true);
                 },
