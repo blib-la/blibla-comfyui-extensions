@@ -21,18 +21,21 @@ app.registerExtension({
   name: groupsName,
   async setup() {
     const getGroupMenuOptions = LGraphCanvas.prototype.getGroupMenuOptions;
-    let move = null;
+    const move = {};
+    app.graph._groups.forEach((group, index) => {
+      group.id = index;
+    });
     LGraphCanvas.prototype.getGroupMenuOptions = function (group) {
       const menuOptions = getGroupMenuOptions.apply(this, arguments);
       menuOptions.push(
         null,
-        move
+        move[group.id]
           ? {
               content: "Unfreeze",
               callback: () => {
                 group.recomputeInsideNodes();
-                group.move = move;
-                move = null;
+                group.move = move[group.id];
+                move[group.id] = null;
                 group._nodes.forEach((node) => {
                   node.flags.pinned = false;
                 });
@@ -42,7 +45,7 @@ app.registerExtension({
               content: "Freeze",
               callback: () => {
                 group.recomputeInsideNodes();
-                move = group.move;
+                move[group.id] = group.move;
                 group.move = () => {};
 
                 group._nodes.forEach((node) => {
