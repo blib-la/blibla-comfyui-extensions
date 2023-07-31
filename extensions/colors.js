@@ -304,7 +304,10 @@ app.registerExtension({
                   node.bgcolor = event.target.value;
                   node.color = shadeHexColor(node.bgcolor);
                   // TODO: check if we can adjust this
-                  // const textColor = getContrastColor(node.bgcolor);
+                  // The method described in the docs does not work
+                  // https://github.com/jagenjo/litegraph.js/tree/master/guides#custom-node-appearance
+                  // node.text_color = getContrastColor(node.bgcolor);
+
                   node.setDirtyCanvas(true, true);
                 },
               }),
