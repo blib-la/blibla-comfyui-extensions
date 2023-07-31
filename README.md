@@ -12,7 +12,6 @@ Extensions for ComfyUI
   * [Options](#options)
   * [Links Render Mode](#links-render-mode)
   * [Colored nodes](#colored-nodes)
-    + [Default](#default)
     + [Positive Negative](#positive-negative)
     + [Dynamic colors](#dynamic-colors)
 - [Context Menu:](#context-menu)
@@ -82,18 +81,13 @@ Choose between 4 modes
 
 ### Colored nodes
 
-Automatically adjusts the colors of the nodes.
-
-**positive\negative**: Adjusts the color based on the title
-
-
-#### Default
-
-Resets to the original behavior (state of last browser reload)
+Various color modes have been added to allow automatic coloring of nodes. 
 
 #### Positive Negative
 
-Colors a node depending on the node title (case-insensitive)
+Colors a node depending on the node title (case-insensitive). 
+
+> This option is compatible with all color modes
 
 - "negative" in title = red
 - "positive" in title = green
@@ -102,9 +96,10 @@ Colors a node depending on the node title (case-insensitive)
 
 #### Dynamic colors
 
-- plain colors all nodes as grey except for "Note" (yellow)
-- by type colors a node by its type
-- rainbow colors each node in rainbow colors (top left to bottom right)
+- default: Resets to the original behavior (state of last browser reload)
+- plain: Colors all Nodes as grey except for "Note" (yellow)
+- by type: Colors a Node by its type
+- rainbow: Colors each Node in rainbow colors (top-left to bottom-right)
 
 **plain** | **by type** | **rainbow**
 
