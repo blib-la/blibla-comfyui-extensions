@@ -12,6 +12,7 @@ Extensions for ComfyUI
   * [Options](#options)
   * [Links Render Mode](#links-render-mode)
   * [Colored nodes](#colored-nodes)
+    + [Default](#default)
     + [Positive Negative](#positive-negative)
     + [Dynamic colors](#dynamic-colors)
 - [Buttons:](#buttons)
