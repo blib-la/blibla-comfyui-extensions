@@ -21,30 +21,26 @@ const pinNodesName = "Failfast.pinNodes";
 app.registerExtension({
   name: pinNodesName,
   async init(app) {
-    const pinButton = $el(
-      "button",
-      {
-        onclick() {
+    const getCanvasMenuOptions = LGraphCanvas.prototype.getCanvasMenuOptions;
+    LGraphCanvas.prototype.getCanvasMenuOptions = function () {
+      const menuOptions = getCanvasMenuOptions.apply(this, arguments);
+      menuOptions.push({
+        content: "Pin all Nodes",
+        callback: () => {
           app.graph._nodes.forEach((node) => {
             node.flags.pinned = true;
           });
         },
-      },
-      "Pin all Nodes",
-    );
-    const unpinButton = $el(
-      "button",
-      {
-        onclick() {
+      });
+      menuOptions.push({
+        content: "Unpin all Nodes",
+        callback: () => {
           app.graph._nodes.forEach((node) => {
             node.flags.pinned = false;
           });
         },
-      },
-      "Unpin all Nodes",
-    );
-
-    // TODO: There's probably an internal mechanism to add buttons
-    app.ui.menuContainer.append(pinButton, unpinButton);
+      });
+      return menuOptions;
+    };
   },
 });
