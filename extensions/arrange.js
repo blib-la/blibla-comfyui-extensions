@@ -20,22 +20,28 @@ const alignName = "Failfast.alignNodes";
 
 app.registerExtension({
   name: alignName,
-  async init(app) {
+  async setup(app) {
     const getCanvasMenuOptions = LGraphCanvas.prototype.getCanvasMenuOptions;
     LGraphCanvas.prototype.getCanvasMenuOptions = function () {
       const menuOptions = getCanvasMenuOptions.apply(this, arguments);
-      menuOptions.push({
-        content: "Arrange (vertical)",
-        callback: () =>
-          app.graph.arrange(
-            LiteGraph.CANVAS_GRID_SIZE * 4,
-            LiteGraph.VERTICAL_LAYOUT,
-          ),
-      });
-      menuOptions.push({
-        content: "Arrange (horizontal)",
-        callback: () => app.graph.arrange(LiteGraph.CANVAS_GRID_SIZE * 2),
-      });
+
+      menuOptions.push(
+        null,
+        {
+          content: "Arrange (vertical)",
+          callback: () =>
+            app.graph.arrange(
+              LiteGraph.CANVAS_GRID_SIZE * 4,
+              LiteGraph.VERTICAL_LAYOUT,
+            ),
+        },
+        {
+          content: "Arrange (horizontal)",
+          callback: () => app.graph.arrange(LiteGraph.CANVAS_GRID_SIZE * 2),
+        },
+        null,
+      );
+
       return menuOptions;
     };
   },
