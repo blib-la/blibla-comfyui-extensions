@@ -15,8 +15,9 @@ Extensions for ComfyUI
     + [Default](#default)
     + [Positive Negative](#positive-negative)
     + [Dynamic colors](#dynamic-colors)
-- [Buttons:](#buttons)
+- [Context Menu:](#context-menu)
   * [Pin or Unpin all Nodes](#pin-or-unpin-all-nodes)
+  * [Arrange all nodes](#arrange-all-nodes)
 - [Single extensions](#single-extensions)
 
 <!-- tocstop -->
@@ -88,16 +89,14 @@ Automatically adjusts the colors of the nodes.
 
 #### Default
 
-A Menu option for node colors has been added. It only works in default mode
-
-![image](https://github.com/failfa-st/failfast-comfyui-extensions/assets/1148334/657d1a6c-d4d9-4091-9a35-16fa9ca50489)
+Resets to the original behavior (state of last browser reload)
 
 #### Positive Negative
 
 Colors a node depending on the node title (case-insensitive)
 
-- negative in title = red
-- positive in title = green
+- "negative" in title = red
+- "positive" in title = green
 
 ![image](https://github.com/failfa-st/failfast-comfyui-extensions/assets/1148334/a1a366ab-7a7f-4d10-b752-7e313f0c7728)
 
@@ -110,11 +109,47 @@ Colors a node depending on the node title (case-insensitive)
 **plain** | **by type** | **rainbow**
 
 ![nodecolor2](https://github.com/ltdrdata/ComfyUI-Manager/assets/1148334/0a0b70f2-5ba7-4cca-b61f-8e776e555635)
-## Buttons:
+
+## Context Menu:
+
+**Nodes**
+
+- Colors > Custom (only works in Color Mode: "default")
+
+**Groups**
+
+- Edit group > Color > Custom
+
+**Screenshot from Nodes (similar for Groups)**  
+
+![image](https://github.com/failfa-st/failfast-comfyui-extensions/assets/1148334/657d1a6c-d4d9-4091-9a35-16fa9ca50489)
+
+
+**Canvas**  
+
+- Arrange (vertical)
+- Arrange (horizontal)
+- Pin all Nodes
+- Unpin all Nodes
+
+![image](https://github.com/failfa-st/hyv/assets/1148334/4ba7027e-d8ab-420c-911a-0a02987d3ff9)
 
 ### Pin or Unpin all Nodes
 
-![image](https://github.com/failfa-st/comfyui-extensions/assets/1148334/27c4c79c-2caf-40e9-b9f4-129456b460f0)
+Locks or unlocks all nodes on the canvas. New nodes will not be affected.
+
+### Arrange all nodes
+
+Arranges all nodes in a vertical or horizontal layout.
+
+**Vertical**
+
+![image](https://github.com/failfa-st/hyv/assets/1148334/c6553232-52f9-4d61-a954-bc0c4645b333)
+
+**Horizontal**  
+
+![image](https://github.com/failfa-st/hyv/assets/1148334/2b519e3f-554b-48f9-9b81-cd1515ec393b)
+
 
 
 ## Single extensions
