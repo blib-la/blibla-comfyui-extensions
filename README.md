@@ -59,7 +59,7 @@ git pull
 
 | Name               | default   | description                                                                          |
 |--------------------|-----------|--------------------------------------------------------------------------------------|
-| Links Render Mode  | `curved`  | Render mode of connector lines (straight, angled, curved, hidden)                    |
+| Links Render Mode  | `spline`  | Render mode of connector lines (straight, angled, curved, hidden)                    |
 | Force Snap to Grid | `false`   | Always snap nodes to grid                                                            |
 | Force Box Shape    | `false`   | remove round corners permanently                                                     |
 | Render shadows     | `true`    | show/hide shadows                                                                    |
@@ -73,8 +73,8 @@ git pull
 Choose between 4 modes
 
 - straight
-- angled
-- curved
+- linear
+- spline (default)
 - hidden
 
 ![image](https://github.com/ltdrdata/ComfyUI-Manager/assets/1148334/af4b05ab-33b8-4cce-be3b-59765b7ea5a6)

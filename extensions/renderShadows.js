@@ -28,7 +28,7 @@ app.registerExtension({
       defaultValue: true,
       onChange(value) {
         app.canvas.render_shadows = value;
-        app.graph.change();
+        app.graph.setDirtyCanvas(true, true);
       },
     });
   },

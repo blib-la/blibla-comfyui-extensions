@@ -32,7 +32,7 @@ app.registerExtension({
       defaultValue: 3,
       onChange(value) {
         app.canvas.connections_width = +value;
-        app.graph.change();
+        app.graph.setDirtyCanvas(true, true);
       },
     });
   },

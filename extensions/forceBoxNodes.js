@@ -28,7 +28,7 @@ app.registerExtension({
       defaultValue: false,
       onChange(value) {
         app.canvas.round_radius = value ? 0 : 8;
-        app.graph.change();
+        app.graph.setDirtyCanvas(true, true);
       },
     });
   },

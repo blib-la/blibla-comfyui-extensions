@@ -18,7 +18,7 @@ import { $el } from "../scripts/ui.js";
  */
 
 const linksRenderModeName = "Failfast.linksRenderMode";
-const renderModes = ["straight", "angled", "curve", "hidden"];
+const renderModes = [...LiteGraph.LINK_RENDER_MODES, "hidden"];
 
 app.registerExtension({
   name: linksRenderModeName,
@@ -59,7 +59,7 @@ app.registerExtension({
       defaultValue: 2,
       onChange(value) {
         app.canvas.links_render_mode = +value;
-        app.graph.change();
+        app.graph.setDirtyCanvas(true, true);
       },
     });
   },
