@@ -189,6 +189,9 @@ function setColorMode(value, app) {
     case 1:
       app.graph.afterChange = function () {
         uncolor(app);
+        if (getPosNegValue()) {
+          colorPositiveNegative(app);
+        }
         return afterChange?.apply(this, arguments);
       };
       uncolor(app);
@@ -196,6 +199,9 @@ function setColorMode(value, app) {
     case 2:
       app.graph.afterChange = function () {
         rainbowify(app);
+        if (getPosNegValue()) {
+          colorPositiveNegative(app);
+        }
         return afterChange?.apply(this, arguments);
       };
       rainbowify(app);
@@ -203,19 +209,20 @@ function setColorMode(value, app) {
     case 3:
       app.graph.afterChange = function () {
         colorByType(app);
+        if (getPosNegValue()) {
+          colorPositiveNegative(app);
+        }
         return afterChange?.apply(this, arguments);
       };
       colorByType(app);
       break;
-    case 4:
+    default:
       app.graph.afterChange = function () {
-        colorPositiveNegative(app);
+        if (getPosNegValue()) {
+          colorPositiveNegative(app);
+        }
         return afterChange?.apply(this, arguments);
       };
-      colorPositiveNegative(app);
-      break;
-    default:
-      app.graph.afterChange = afterChange;
       app.graph._nodes.forEach((node) => {
         node.bgcolor = node._bgcolor ?? node.bgcolor;
         node.color = node._color ?? node.color;
@@ -223,10 +230,21 @@ function setColorMode(value, app) {
       });
       break;
   }
+  if (getPosNegValue()) {
+    colorPositiveNegative(app);
+  }
 }
 
-const colorModes = ["default", "plain", "rainbow", "type", "positive/negative"];
+const colorModes = ["default", "plain", "rainbow", "type"];
 const colorsName = "Failfast.colors";
+
+function getPosNegValue() {
+  return (
+    window.localStorage.getItem(`Comfy.Settings.${colorsName}-posneg`) ===
+    "true"
+  );
+}
+
 let loading = false;
 app.registerExtension({
   name: colorsName,
@@ -325,10 +343,39 @@ app.registerExtension({
                 });
               }),
             ),
+            $el(
+              "label",
+              { style: { display: "block", paddingTop: "0.5rem" } },
+              [
+                $el("span", { style: { paddingRight: "0.5rem" } }, [
+                  "Positive / Negative",
+                ]),
+                $el("input", {
+                  type: "checkbox",
+                  checked:
+                    window.localStorage.getItem(
+                      `Comfy.Settings.${colorsName}-posneg`,
+                    ) === "true",
+                  onchange: (event) => {
+                    window.localStorage.setItem(
+                      `Comfy.Settings.${colorsName}-posneg`,
+                      event.target.checked.toString(),
+                    );
+                    const value = +(
+                      window.localStorage.getItem(
+                        `Comfy.Settings.${colorsName}`,
+                      ) ?? "0"
+                    );
+                    setColorMode(value, app);
+                  },
+                }),
+              ],
+            ),
           ]),
         ]);
       },
-      tooltip: "Automatic color modes for nodes.",
+      tooltip:
+        "Automatic color modes for nodes. (positive / negative will respect those words in the title )",
       defaultValue: 2,
       onChange(value) {
         setColorMode(value, app);
