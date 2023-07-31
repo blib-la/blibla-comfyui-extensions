@@ -54,8 +54,7 @@ git pull
 
 > Open settings to show options
 
-![image](https://github.com/failfa-st/failfast-comfyui-extensions/assets/1148334/429a51ca-3b4e-49f2-ad59-85e4b1cda403)
-
+![image](https://github.com/failfa-st/failfast-comfyui-extensions/assets/1148334/d919d53f-8160-4556-a63a-66ec25881b2d)
 ### Options
 
 | Name               | default   | description                                                                          |
@@ -66,7 +65,7 @@ git pull
 | Render shadows     | `true`    | show/hide shadows                                                                    |
 | Connections Width  | `3`       | width of connector lines                                                             |
 | Font size          | `10`      | font-size of textareas                                                               |
-| Colored Nodes      | `default` | Color nodes in dynamic colors  (default, plain, by type, rainbow, positive negative) |
+| Colored Nodes      | `default` | Color nodes in dynamic colors  (default, plain, by type, rainbow, positive/negative) |
 | Batch resize       | `false`   | When multiple nodes are selected, they will all resize to the same size (sync)       |
 
 ### Links Render Mode
@@ -92,9 +91,10 @@ Automatically adjusts the colors of the nodes.
 A Menu option for node colors has been added. It only works in default mode
 
 ![image](https://github.com/failfa-st/failfast-comfyui-extensions/assets/1148334/657d1a6c-d4d9-4091-9a35-16fa9ca50489)
+
 #### Positive Negative
 
-The title is case-insensitive
+Colors a node depending on the node title (case-insensitive)
 
 - negative in title = red
 - positive in title = green
