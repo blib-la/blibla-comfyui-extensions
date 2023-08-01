@@ -5,7 +5,7 @@ import platform
 import shutil
 import subprocess
 
-comfy_path = '../..'
+comfy_path = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 def rmtree(path):
     retry_count = 3

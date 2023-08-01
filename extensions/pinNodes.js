@@ -9,8 +9,7 @@
  * GitHub: https://github.com/failfa-st
  * Discord: https://discord.com/invite/m3TBB9XEkb
  */
-import { app } from "../scripts/app.js";
-import { $el } from "../scripts/ui.js";
+import { app } from "/scripts/app.js";
 
 /**
  * Pin/Unpin all nodes on canvas
@@ -41,7 +40,7 @@ app.registerExtension({
               node.flags.pinned = false;
             });
           },
-        },
+        }
       );
 
       return menuOptions;

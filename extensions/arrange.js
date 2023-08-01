@@ -9,8 +9,8 @@
  * GitHub: https://github.com/failfa-st
  * Discord: https://discord.com/invite/m3TBB9XEkb
  */
-import { app } from "../scripts/app.js";
-import { $el } from "../scripts/ui.js";
+import { app } from "/scripts/app.js";
+import { $el } from "/scripts/ui.js";
 
 /**
  * Render Shadow
@@ -32,13 +32,13 @@ app.registerExtension({
           callback: () =>
             app.graph.arrange(
               LiteGraph.CANVAS_GRID_SIZE * 4,
-              LiteGraph.VERTICAL_LAYOUT,
+              LiteGraph.VERTICAL_LAYOUT
             ),
         },
         {
           content: "Arrange (horizontal)",
           callback: () => app.graph.arrange(LiteGraph.CANVAS_GRID_SIZE * 2),
-        },
+        }
       );
 
       return menuOptions;

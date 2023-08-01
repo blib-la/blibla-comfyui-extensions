@@ -9,7 +9,7 @@
  * GitHub: https://github.com/failfa-st
  * Discord: https://discord.com/invite/m3TBB9XEkb
  */
-import { app } from "../scripts/app.js";
+import { app } from "/scripts/app.js";
 
 /**
  * Render Shadow
@@ -52,7 +52,7 @@ app.registerExtension({
                   node.flags.pinned = true;
                 });
               },
-            },
+            }
       );
 
       return menuOptions;
@@ -92,7 +92,7 @@ app.registerExtension({
               });
             });
           },
-        },
+        }
       );
 
       return menuOptions;

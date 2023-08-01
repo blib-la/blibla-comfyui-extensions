@@ -10,8 +10,8 @@
  * Discord: https://discord.com/invite/m3TBB9XEkb
  */
 
-import { app } from "../scripts/app.js";
-import { $el } from "../scripts/ui.js";
+import { app } from "/scripts/app.js";
+import { $el } from "/scripts/ui.js";
 
 /**
  * Toggle links render mode
@@ -50,7 +50,7 @@ app.registerExtension({
                   value: index,
                   selected: index === +value,
                 });
-              }),
+              })
             ),
           ]),
         ]);

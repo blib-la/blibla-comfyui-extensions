@@ -9,7 +9,7 @@
  * GitHub: https://github.com/failfa-st
  * Discord: https://discord.com/invite/m3TBB9XEkb
  */
-import { app } from "../scripts/app.js";
+import { app } from "/scripts/app.js";
 
 /**
  * Nodes
@@ -35,7 +35,7 @@ app.registerExtension({
   async setup(app) {
     app.graph._nodes.forEach(function (node) {
       let active = JSON.parse(
-        window.localStorage.getItem(`Comfy.Settings.${nodesName}`) ?? "false",
+        window.localStorage.getItem(`Comfy.Settings.${nodesName}`) ?? "false"
       );
       const onResize = node.onResize;
       node.onResize = function (size) {
@@ -63,7 +63,7 @@ app.registerExtension({
       const onMouseDown = node.onMouseDown;
       node.onMouseDown = function () {
         active = JSON.parse(
-          window.localStorage.getItem(`Comfy.Settings.${nodesName}`) ?? "false",
+          window.localStorage.getItem(`Comfy.Settings.${nodesName}`) ?? "false"
         );
         return onMouseDown?.apply(this, arguments);
       };

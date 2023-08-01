@@ -9,8 +9,8 @@
  * GitHub: https://github.com/failfa-st
  * Discord: https://discord.com/invite/m3TBB9XEkb
  */
-import { app } from "../scripts/app.js";
-import { $el } from "../scripts/ui.js";
+import { app } from "/scripts/app.js";
+import { $el } from "/scripts/ui.js";
 
 function getColor(index, lengthOfItems, l = 0.5) {
   // Normalize the index value to be between 0 and 360 for full spectrum of hue
@@ -311,9 +311,9 @@ app.registerExtension({
                   node.setDirtyCanvas(true, true);
                 },
               }),
-            ],
+            ]
           ),
-        ]),
+        ])
       );
       if (isGroup) {
         menuRoot.append(
@@ -351,9 +351,9 @@ app.registerExtension({
                     node.setDirtyCanvas(true, true);
                   },
                 }),
-              ],
+              ]
             ),
-          ]),
+          ])
         );
       }
       return response;
@@ -385,7 +385,7 @@ app.registerExtension({
                   value: index,
                   selected: index === +value,
                 });
-              }),
+              })
             ),
             $el(
               "label",
@@ -398,19 +398,19 @@ app.registerExtension({
                   type: "checkbox",
                   checked:
                     window.localStorage.getItem(
-                      `Comfy.Settings.${colorsName}-posneg`,
+                      `Comfy.Settings.${colorsName}-posneg`
                     ) === "true",
                   onchange: (event) => {
                     window.localStorage.setItem(
                       `Comfy.Settings.${colorsName}-posneg`,
-                      event.target.checked.toString(),
+                      event.target.checked.toString()
                     );
                     if (event.target.checked) {
                       colorPositiveNegative(app);
                     }
                   },
                 }),
-              ],
+              ]
             ),
           ]),
         ]);
