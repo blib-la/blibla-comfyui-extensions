@@ -1,3 +1,12 @@
+# [](https://github.com/failfa-st/failfast-comfyui-extensions/compare/v1.0.0...v) (2023-08-01)
+
+
+### Features
+
+* **reroutes:** al;low showing title on reroute ([27e49f8](https://github.com/failfa-st/failfast-comfyui-extensions/commit/27e49f83d5c37a529638862132a40cd837a41127))
+
+
+
 #  (2023-08-01)
 
 
