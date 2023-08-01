@@ -39,7 +39,6 @@ app.registerExtension({
           content: "Arrange (horizontal)",
           callback: () => app.graph.arrange(LiteGraph.CANVAS_GRID_SIZE * 2),
         },
-        null,
       );
 
       return menuOptions;

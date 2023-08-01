@@ -25,6 +25,7 @@ app.registerExtension({
     LGraphCanvas.prototype.getCanvasMenuOptions = function () {
       const menuOptions = getCanvasMenuOptions.apply(this, arguments);
       menuOptions.push(
+        null,
         {
           content: "Pin all Nodes",
           callback: () => {
