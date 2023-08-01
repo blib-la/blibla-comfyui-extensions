@@ -50,7 +50,7 @@ git clone git@github.com:failfa-st/failfast-comfyui-extensions.git
 The folder structure should resemble: `your-path/ComfyUI/web/extensions/failfast-comfyui-extensions`.
 
 <div align="center">
-    <img src="https://github.com/failfa-st/failfast-comfyui-extensions/assets/1148334/6d08fd63-5309-44f8-934a-e120a48c0798" alt="Folder structure example" height="200px">
+    <img src="https://github.com/failfa-st/failfast-comfyui-extensions/assets/1148334/6d08fd63-5309-44f8-934a-e120a48c0798" alt="Folder structure example" height="300px">
     <p>Example of Correct Folder Structure</p>
 </div>
 
@@ -68,7 +68,7 @@ git pull
 Explore various customization options available in the settings:
 
 <div align="center">
-    <img src="https://github.com/failfa-st/failfast-comfyui-extensions/assets/1148334/d919d53f-8160-4556-a63a-66ec25881b2d" alt="Settings options" height="200px">
+    <img src="https://github.com/failfa-st/failfast-comfyui-extensions/assets/1148334/d919d53f-8160-4556-a63a-66ec25881b2d" alt="Settings options" >
     <p>Settings Options</p>
 </div>
 
@@ -97,7 +97,7 @@ Choose from four rendering modes for connector lines:
 - hidden
 
 <div align="center">
-    <img src="https://github.com/ltdrdata/ComfyUI-Manager/assets/1148334/af4b05ab-33b8-4cce-be3b-59765b7ea5a6" alt="Links Render Mode" height="200px">
+    <img src="https://github.com/ltdrdata/ComfyUI-Manager/assets/1148334/af4b05ab-33b8-4cce-be3b-59765b7ea5a6" alt="Links Render Mode" height="300px">
     <p>Links Render Mode Options</p>
 </div>
 
@@ -113,7 +113,7 @@ Nodes will be colored based on the node title (case-insensitive). This option is
 - Titles containing "positive" will color the node green.
 
 <div align="center">
-    <img src="https://github.com/failfa-st/failfast-comfyui-extensions/assets/1148334/a1a366ab-7a7f-4d10-b752-7e313f0c7728" alt="Positive Negative Node Colors" height="200px">
+    <img src="https://github.com/failfa-st/failfast-comfyui-extensions/assets/1148334/a1a366ab-7a7f-4d10-b752-7e313f0c7728" alt="Positive Negative Node Colors" height="300px">
     <p>Positive and Negative Node Colors</p>
 </div>
 
@@ -127,7 +127,7 @@ Several dynamic coloring modes are available:
 - rainbow: Colors each Node in rainbow colors (top-left to bottom-right).
 
 <div align="center">
-    <img src="https://github.com/ltdrdata/ComfyUI-Manager/assets/1148334/0a0b70f2-5ba7-4cca-b61f-8e776e555635" alt="Dynamic Colors Modes" height="200px">
+    <img src="https://github.com/ltdrdata/ComfyUI-Manager/assets/1148334/0a0b70f2-5ba7-4cca-b61f-8e776e555635" alt="Dynamic Colors Modes">
     <p>Dynamic Colors Modes: plain, by type, rainbow</p>
 </div>
 
@@ -140,7 +140,7 @@ The context menu offers additional options for nodes, groups, colors, and the ca
 - Custom color option (only available in "default" Color Mode).
 
 <div align="center">
-    <img src="https://github.com/failfa-st/failfast-comfyui-extensions/assets/1148334/f0c4dc53-0e40-480d-a3f9-09b50a3ab56d" alt="Node options" height="200px">
+    <img src="https://github.com/failfa-st/failfast-comfyui-extensions/assets/1148334/f0c4dc53-0e40-480d-a3f9-09b50a3ab56d" alt="Node options" height="300px">
     <p>Node Options</p>
 </div>
 
@@ -151,7 +151,7 @@ The context menu offers additional options for nodes, groups, colors, and the ca
 - Freeze/unfreeze group.
 
 <div align="center">
-    <img src="https://github.com/failfa-st/hyv/assets/1148334/7558fcfb-1733-4d78-904b-50891f29fa68" alt="Group options" height="200px">
+    <img src="https://github.com/failfa-st/hyv/assets/1148334/7558fcfb-1733-4d78-904b-50891f29fa68" alt="Group options" height="300px">
     <p>Group Options</p>
 </div>
 
@@ -162,7 +162,7 @@ The context menu offers additional options for nodes, groups, colors, and the ca
 - Pin/unpin all nodes.
 
 <div align="center">
-    <img src="https://github.com/failfa-st/failfast-comfyui-extensions/assets/1148334/d45ed248-2a19-4862-bda5-49f9b2703296" alt="Canvas options" height="200px">
+    <img src="https://github.com/failfa-st/failfast-comfyui-extensions/assets/1148334/d45ed248-2a19-4862-bda5-49f9b2703296" alt="Canvas options" height="300px">
     <p>Canvas Options</p>
 </div>
 
@@ -173,6 +173,14 @@ Lock or unlock a group and all its child Nodes. Note that new Nodes will not be 
 ### Pin or Unpin all Nodes
 
 Lock or unlock all nodes on the canvas, regardless of their group.
+
+### Arranging all Nodes
+
+You can arrange all Nodes in either vertical or horizontal layout.
+
+|                                          Vertical Layout                                          |                                          Horizontal Layout                                          |
+| :-----------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------: |
+| ![vertical](https://github.com/failfa-st/hyv/assets/1148334/c6553232-52f9-4d61-a954-bc0c4645b333) | ![horizontal](https://github.com/failfa-st/hyv/assets/1148334/2b519e3f-554b-48f9-9b81-cd1515ec393b) |
 
 ## Single Extensions
 
