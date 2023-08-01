@@ -31,7 +31,7 @@ personalization in your ComfyUI environment.
 
 ## Installation
 
-Two methods are available for installation:
+Three methods are available for installation:
 
 1. Load via [ComfyUI manager](https://github.com/ltdrdata/ComfyUI-Manager)
 2. Clone the repository directly into the extensions directory.
