@@ -139,7 +139,6 @@ The context menu offers additional options for nodes, groups, colors, and the ca
 - Show title on Reroute node
 - Render Reroute as dot
 
-![Screenshot 2023-08-01 164137](
 
 
 <div align="center">
