@@ -46,7 +46,7 @@ git clone git@github.com:failfa-st/failfast-comfyui-extensions.git
 
 1. Download the project archive from [here](https://github.com/failfa-st/failfast-comfyui-extensions/archive/refs/heads/main.zip).
 2. Extract the downloaded zip file.
-3. Move the extracted files to `your-path/ComfyUI/custom_nodes`.
+3. Move the extracted files to `path/to/your/ComfyUI/custom_nodes`.
 4. Restart ComfyUI
 
 The folder structure should resemble: `path/to/your/ComfyUI/custom_nodes/failfast-comfyui-extensions`.
