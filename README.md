@@ -175,9 +175,20 @@ The context menu offers additional options for nodes, groups, colors, and the ca
 #### Render Reroute as Dot
 
 <div align="center">
-    <img src="https://github.com/failfa-st/failfast-comfyui-extensions/assets/1148334/c02818a1-3c87-4d15-8e91-2328b08d46f3" alt="reroute Node as dot" height="300px">
+    <img src="https://github.com/failfa-st/failfast-comfyui-extensions/assets/1148334/d575b450-da5d-4357-832f-de294a5cc3d9" alt="reroute Node as dot" width="400px" >
     <p>Reroute as dot</p>
 </div>
+
+
+|                                          microdot                                         |                                                    microdot / dot / off                                                     |
+| :-----------------------------------------------------------------------------------------------: |:---------------------------------------------------------------------------------------------------------------------------:|
+| ![vertical](https://github.com/failfa-st/failfast-comfyui-extensions/assets/1148334/41fab393-5d85-4e2c-8f5d-2e003cd6b2b3) | ![horizontal](https://github.com/failfa-st/failfast-comfyui-extensions/assets/1148334/403df5b7-7d05-40a7-bd61-1c807e0da433) |
+
+
+
+
+
+
 
 #### Copy Images
 
