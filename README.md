@@ -2,26 +2,29 @@ Certainly! Here is your README, incorporating the image changes you requested:
 
 # ComfyUI Extensions by Failfa.st
 
-Enhance your ComfyUI experience with these handy extensions.
+ComfyUI Extensions by Failfa.st is a robust suite of enhancements, designed to optimize your ComfyUI experience. It
+provides a range of features, including customizable render modes, dynamic node coloring, and versatile management
+tools. Whether for individual use or team collaboration, our extensions aim to enhance productivity, readability, and
+personalization in your ComfyUI environment.
 
 [CHANGELOG](CHANGELOG.md) | [LICENSE (AGPL 3.0)](LICENSE)
 
 <!-- toc -->
 
 - [Installation](#installation)
-  * [Clone Repository](#clone-repository)
-  * [Download Manually](#download-manually)
+  - [Clone Repository](#clone-repository)
+  - [Download Manually](#download-manually)
 - [Update](#update)
 - [Settings](#settings)
-  * [Options](#options)
-  * [Links Render Mode](#links-render-mode)
-  * [Colored Nodes](#colored-nodes)
-    + [Positive/Negative](#positivenegative)
-    + [Dynamic Colors](#dynamic-colors)
+  - [Options](#options)
+  - [Links Render Mode](#links-render-mode)
+  - [Colored Nodes](#colored-nodes)
+    - [Positive/Negative](#positivenegative)
+    - [Dynamic Colors](#dynamic-colors)
 - [Context Menu](#context-menu)
-  * [Freeze or Unfreeze Group](#freeze-or-unfreeze-group)
-  * [Pin or Unpin all Nodes](#pin-or-unpin-all-nodes)
-  * [Arranging all Nodes](#arranging-all-nodes)
+  - [Freeze or Unfreeze Group](#freeze-or-unfreeze-group)
+  - [Pin or Unpin all Nodes](#pin-or-unpin-all-nodes)
+  - [Arranging all Nodes](#arranging-all-nodes)
 - [Single Extensions](#single-extensions)
 - [Contribution](#contribution)
 - [License](#license)
@@ -183,14 +186,16 @@ You can arrange all Nodes in either vertical or horizontal layout.
 | :-----------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------: |
 | ![vertical](https://github.com/failfa-st/hyv/assets/1148334/c6553232-52f9-4d61-a954-bc0c4645b333) | ![horizontal](https://github.com/failfa-st/hyv/assets/1148334/2b519e3f-554b-48f9-9b81-cd1515ec393b) |
 
-## Single Extensions
+## Single Extensions Usage
 
-In addition to the bundled extension, individual extensions are also available. These include:
+Each extension is fully capable of functioning individually. This allows you to incorporate only the extensions you need, rather than the entire suite.
+
+Simply download the desired file from the [`extensions`](extensions) directory and place it in the extensions folder of ComfyUI.
+
+1. Download the required file for example, [linksRenderMode](extensions/linksRenderMode.js).
+2. Transfer the file to `path/to/ComfyUI/web/extensions`.
+3. The folder structure should appear as: `path/to/ComfyUI/web/extensions/linksRenderMode.js`.
 
 ## Contribution
 
 Want to contribute to ComfyUI Extensions? We encourage community input and improvements! Check out our [CONTRIBUTING](CONTRIBUTING.md) guide for more information.
-
-## License
-
-ComfyUI Extensions is licensed under the AGPL-3.0 License. See [LICENSE](LICENSE) for more information.
