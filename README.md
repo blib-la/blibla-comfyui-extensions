@@ -1,5 +1,8 @@
 # ComfyUI Extensions by Failfa.st
 
+![Screenshot 2023-08-02 004936](https://github.com/failfa-st/failfast-comfyui-extensions/assets/1148334/d1530160-3c77-4aac-952f-7b9f2cf37b8f)
+
+
 ComfyUI Extensions by Failfa.st is a robust suite of enhancements, designed to optimize your ComfyUI experience. It
 provides a range of features, including customizable render modes, dynamic node coloring, and versatile management
 tools. Whether for individual use or team collaboration, our extensions aim to enhance productivity, readability, and
