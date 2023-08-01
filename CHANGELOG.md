@@ -1,3 +1,12 @@
+# [](https://github.com/failfa-st/failfast-comfyui-extensions/compare/v1.3.0...v) (2023-08-01)
+
+
+### Features
+
+* **images:** allow copy image ([27eb284](https://github.com/failfa-st/failfast-comfyui-extensions/commit/27eb284229235e301496326d22cd3c48e16f6f23))
+
+
+
 # [](https://github.com/failfa-st/failfast-comfyui-extensions/compare/v1.0.0...v) (2023-08-01)
 
 
