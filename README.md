@@ -9,18 +9,19 @@ Enhance your ComfyUI experience with these handy extensions.
 <!-- toc -->
 
 - [Installation](#installation)
-  - [Clone Repository](#clone-repository)
-  - [Download Manually](#download-manually)
+  * [Clone Repository](#clone-repository)
+  * [Download Manually](#download-manually)
 - [Update](#update)
 - [Settings](#settings)
-  - [Options](#options)
-  - [Links Render Mode](#links-render-mode)
-  - [Colored Nodes](#colored-nodes)
-    - [Positive/Negative](#positivenegative)
-    - [Dynamic Colors](#dynamic-colors)
+  * [Options](#options)
+  * [Links Render Mode](#links-render-mode)
+  * [Colored Nodes](#colored-nodes)
+    + [Positive/Negative](#positivenegative)
+    + [Dynamic Colors](#dynamic-colors)
 - [Context Menu](#context-menu)
-  - [Freeze or Unfreeze Group](#freeze-or-unfreeze-group)
-  - [Pin or Unpin all Nodes](#pin-or-unpin-all-nodes)
+  * [Freeze or Unfreeze Group](#freeze-or-unfreeze-group)
+  * [Pin or Unpin all Nodes](#pin-or-unpin-all-nodes)
+  * [Arranging all Nodes](#arranging-all-nodes)
 - [Single Extensions](#single-extensions)
 - [Contribution](#contribution)
 - [License](#license)
@@ -50,7 +51,7 @@ git clone git@github.com:failfa-st/failfast-comfyui-extensions.git
 The folder structure should resemble: `your-path/ComfyUI/web/extensions/failfast-comfyui-extensions`.
 
 <div align="center">
-    <img src="https://github.com/failfa-st/failfast-comfyui-extensions/assets/1148334/6d08fd63-5309-44f8-934a-e120a48c0798" alt="Folder structure example" height="300px">
+    <img src="https://github.com/failfa-st/failfast-comfyui-extensions/assets/1148334/6d08fd63-5309-44f8-934a-e120a48c0798" alt="Folder structure example">
     <p>Example of Correct Folder Structure</p>
 </div>
 
