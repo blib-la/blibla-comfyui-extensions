@@ -12,7 +12,7 @@
 import { app } from "/scripts/app.js";
 
 const reroutesName = "Failfast.reroutes";
-const mini =[34,26]
+const mini = [34, 26];
 function miniReroute(node) {
   if (node.type !== "Reroute") {
     return;
@@ -36,9 +36,7 @@ function miniReroute(node) {
       get() {
         return this._size;
       },
-      set() {
-        console.log("prevented");
-      },
+      set() {},
     });
     node._size[0] = mini[0];
     node._size[1] = mini[1];
@@ -73,8 +71,8 @@ app.registerExtension({
         content: node.properties.showTitle ? "Hide Title" : "Show Title",
         callback() {
           node.outputs[0].label = node.properties.showTitle
-              ? undefined
-              : node.title;
+            ? undefined
+            : node.title;
           node.properties.showTitle = !node.properties.showTitle;
         },
       });
@@ -97,9 +95,7 @@ app.registerExtension({
               get() {
                 return this._size;
               },
-              set() {
-                console.log("prevented");
-              },
+              set() {},
             });
           }
           node._size[0] = node.properties.dot ? 75 : mini[0];
