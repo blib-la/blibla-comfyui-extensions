@@ -1,6 +1,7 @@
 {
   "name": "failfast-comfyui-extensions",
   "scripts": {
-    "changelog": "npx conventional-changelog-cli -p angular -i CHANGELOG.md -s"
+    "changelog": "npx conventional-changelog-cli -p angular -i CHANGELOG.md -s",
+    "toc": "npx markdown-toc README.md -i "
   }
 }

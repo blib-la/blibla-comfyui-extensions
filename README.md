@@ -10,6 +10,7 @@ personalization in your ComfyUI environment.
 <!-- toc -->
 
 - [Installation](#installation)
+  * [Load via ComfyUI manager](#load-via-comfyui-manager)
   * [Clone Repository](#clone-repository)
   * [Download Manually](#download-manually)
 - [Update](#update)
@@ -32,8 +33,17 @@ personalization in your ComfyUI environment.
 
 Two methods are available for installation:
 
-1. Clone the repository directly into the extensions directory.
-2. Download the project manually.
+1. Load via [ComfyUI manager](https://github.com/ltdrdata/ComfyUI-Manager)
+2. Clone the repository directly into the extensions directory.
+3. Download the project manually.
+
+
+### Load via ComfyUI manager
+
+<div align="center">
+    <img src="https://github.com/failfa-st/failfast-comfyui-extensions/assets/1148334/796aaa99-9b16-4087-bebb-ed8638a8b9fc" alt="ComfyUI manager" >
+    <p>Install via ComfyUI manager</p>
+</div>
 
 ### Clone Repository
 
@@ -140,7 +150,6 @@ The context menu offers additional options for nodes, groups, colors, and the ca
 - Render Reroute as dot
 
 
-
 <div align="center">
     <img src="https://github.com/failfa-st/failfast-comfyui-extensions/assets/1148334/f0c4dc53-0e40-480d-a3f9-09b50a3ab56d" alt="Node color options" height="300px">
     <p>Node Color Options</p>
@@ -155,7 +164,6 @@ The context menu offers additional options for nodes, groups, colors, and the ca
     <img src="https://github.com/failfa-st/failfast-comfyui-extensions/assets/1148334/c02818a1-3c87-4d15-8e91-2328b08d46f3" alt="reroute Node as dot" height="300px">
     <p>Reroute as dot</p>
 </div>
-
 
 
 **Groups**
