@@ -1,14 +1,12 @@
-# [](https://github.com/failfa-st/failfast-comfyui-extensions/compare/v1.3.0...v) (2023-08-01)
+# [1.5.0](https://github.com/failfa-st/failfast-comfyui-extensions/compare/v1.4.0...v1.5.0) (2023-08-01)
 
 
 ### Features
 
-* **images:** allow copy image ([27eb284](https://github.com/failfa-st/failfast-comfyui-extensions/commit/27eb284229235e301496326d22cd3c48e16f6f23))
 * **reroute:** allow dot & microdot ([088f89d](https://github.com/failfa-st/failfast-comfyui-extensions/commit/088f89d41406b081d37e29c5601dc529997c6c33))
 
 
-
-# [](https://github.com/failfa-st/failfast-comfyui-extensions/compare/v1.3.0...v) (2023-08-01)
+# [1.4.0](https://github.com/failfa-st/failfast-comfyui-extensions/compare/v1.3.0...v1.4.0) (2023-08-01)
 
 
 ### Features
@@ -16,28 +14,23 @@
 * **images:** allow copy image ([27eb284](https://github.com/failfa-st/failfast-comfyui-extensions/commit/27eb284229235e301496326d22cd3c48e16f6f23))
 
 
-
-# [](https://github.com/failfa-st/failfast-comfyui-extensions/compare/v1.0.0...v) (2023-08-01)
-
+# [1.3.0](https://github.com/failfa-st/failfast-comfyui-extensions/compare/v1.2.0...v1.3.0) (2023-08-01)
 
 ### Features
 
 * allow Reroute as dot ([9cf412f](https://github.com/failfa-st/failfast-comfyui-extensions/commit/9cf412f4d7c05eaf4f958b8e0752cb75d764425a))
-* **reroutes:** allow showing title on reroute ([27e49f8](https://github.com/failfa-st/failfast-comfyui-extensions/commit/27e49f83d5c37a529638862132a40cd837a41127))
 
 
-
-# [](https://github.com/failfa-st/failfast-comfyui-extensions/compare/v1.0.0...v) (2023-08-01)
-
+# [1.2.0](https://github.com/failfa-st/failfast-comfyui-extensions/compare/v1.1.0...v1.2.0) (2023-08-01)
 
 ### Features
 
-* **reroutes:** al;low showing title on reroute ([27e49f8](https://github.com/failfa-st/failfast-comfyui-extensions/commit/27e49f83d5c37a529638862132a40cd837a41127))
+* **reroutes:** allow showing title on reroute ([27e49f8](https://github.com/failfa-st/failfast-comfyui-extensions/commit/27e49f83d5c37a529638862132a40cd837a41127))
+
+# [1.1.0](https://github.com/failfa-st/failfast-comfyui-extensions/compare/v1.0.0...v1.1.0) (2023-08-01)
 
 
-
-#  (2023-08-01)
-
+#  [1.0.0] (2023-08-01)
 
 ### Bug Fixes
 
