@@ -1,171 +1,187 @@
-# comfyui-extensions
+Certainly! Here is your README, incorporating the image changes you requested:
 
-Extensions for ComfyUI
+# ComfyUI Extensions by Failfa.st
+
+Enhance your ComfyUI experience with these handy extensions.
+
+[CHANGELOG](CHANGELOG.md) | [LICENSE (AGPL 3.0)](LICENSE)
 
 <!-- toc -->
 
 - [Installation](#installation)
-  * [Clone repo (option 1)](#clone-repo-option-1)
-  * [Download (option 2)](#download-option-2)
+  - [Clone Repository](#clone-repository)
+  - [Download Manually](#download-manually)
 - [Update](#update)
 - [Settings](#settings)
-  * [Options](#options)
-  * [Links Render Mode](#links-render-mode)
-  * [Colored nodes](#colored-nodes)
-    + [Positive Negative](#positive-negative)
-    + [Dynamic colors](#dynamic-colors)
-- [Context Menu:](#context-menu)
-  * [Freeze or unfreeze Group](#freeze-or-unfreeze-group)
-  * [Pin or Unpin all Nodes](#pin-or-unpin-all-nodes)
-  * [Arrange all nodes](#arrange-all-nodes)
-- [Single extensions](#single-extensions)
+  - [Options](#options)
+  - [Links Render Mode](#links-render-mode)
+  - [Colored Nodes](#colored-nodes)
+    - [Positive/Negative](#positivenegative)
+    - [Dynamic Colors](#dynamic-colors)
+- [Context Menu](#context-menu)
+  - [Freeze or Unfreeze Group](#freeze-or-unfreeze-group)
+  - [Pin or Unpin all Nodes](#pin-or-unpin-all-nodes)
+- [Single Extensions](#single-extensions)
+- [Contribution](#contribution)
+- [License](#license)
 
 <!-- tocstop -->
 
 ## Installation
 
-> Options:  
-> 1. clone it into the extensions directory  
-> 2. download the project  
+Two methods are available for installation:
 
-### Clone repo (option 1)
+1. Clone the repository directly into the extensions directory.
+2. Download the project manually.
+
+### Clone Repository
 
 ```shell
-cd path/to/ComfyUI/web/extensions
+cd your-path/ComfyUI/web/extensions
 git clone git@github.com:failfa-st/failfast-comfyui-extensions.git
 ```
 
-### Download (option 2)
+### Download Manually
 
-1. Download [this zip](https://github.com/failfa-st/failfast-comfyui-extensions/archive/refs/heads/main.zip)
-2. unzip the archive
-3. Copy to `path/to/ComfyUI/web/extensions`
-4. the folder structure should look like this: `path/to/ComfyUI/web/extensions/failfast-comfyui-extensions`
+1. Download the project archive from [here](https://github.com/failfa-st/failfast-comfyui-extensions/archive/refs/heads/main.zip).
+2. Extract the downloaded zip file.
+3. Move the extracted files to `your-path/ComfyUI/web/extensions`.
 
-![image](https://github.com/failfa-st/failfast-comfyui-extensions/assets/1148334/6d08fd63-5309-44f8-934a-e120a48c0798)
+The folder structure should resemble: `your-path/ComfyUI/web/extensions/failfast-comfyui-extensions`.
+
+<div align="center">
+    <img src="https://github.com/failfa-st/failfast-comfyui-extensions/assets/1148334/6d08fd63-5309-44f8-934a-e120a48c0798" alt="Folder structure example" height="200px">
+    <p>Example of Correct Folder Structure</p>
+</div>
 
 ## Update
 
+To update the extensions, pull the latest changes from the repository:
+
 ```shell
-cd path/to/ComfyUI/web/extensions/failfast-comfyui-extensions
+cd your-path/ComfyUI/web/extensions/failfast-comfyui-extensions
 git pull
 ```
 
 ## Settings
 
-> Open settings to show options
+Explore various customization options available in the settings:
 
-![image](https://github.com/failfa-st/failfast-comfyui-extensions/assets/1148334/d919d53f-8160-4556-a63a-66ec25881b2d)
+<div align="center">
+    <img src="https://github.com/failfa-st/failfast-comfyui-extensions/assets/1148334/d919d53f-8160-4556-a63a-66ec25881b2d" alt="Settings options" height="200px">
+    <p>Settings Options</p>
+</div>
+
 ### Options
 
-| Name               | default   | description                                                                          |
-|--------------------|-----------|--------------------------------------------------------------------------------------|
-| Links Render Mode  | `spline`  | Render mode of connector lines (straight, angled, curved, hidden)                    |
-| Force Snap to Grid | `false`   | Always snap nodes to grid                                                            |
-| Force Box Shape    | `false`   | remove round corners permanently                                                     |
-| Render shadows     | `true`    | show/hide shadows                                                                    |
-| Connections Width  | `3`       | width of connector lines                                                             |
-| Font size          | `10`      | font-size of textareas                                                               |
-| Colored Nodes      | `default` | Color nodes in dynamic colors  (default, plain, by type, rainbow, positive/negative) |
-| Batch resize       | `false`   | When multiple nodes are selected, they will all resize to the same size (sync)       |
+Different customization options available with their default settings and descriptions:
+
+| Name               | Default   | Description                                                                         |
+| ------------------ | --------- | ----------------------------------------------------------------------------------- |
+| Links Render Mode  | `spline`  | Sets the render mode of connector lines (options: straight, angled, curved, hidden) |
+| Force Snap to Grid | `false`   | Forces nodes to snap to the grid                                                    |
+| Force Box Shape    | `false`   | Removes round corners from all nodes                                                |
+| Render Shadows     | `true`    | Toggles visibility of shadows                                                       |
+| Connections Width  | `3`       | Sets the width of connector lines                                                   |
+| Font Size          | `10`      | Sets the font size of textareas                                                     |
+| Colored Nodes      | `default` | Applies dynamic coloring to nodes                                                   |
+| Batch Resize       | `false`   | Resizes multiple selected nodes to the same size synchronously                      |
 
 ### Links Render Mode
 
-Choose between 4 modes
+Choose from four rendering modes for connector lines:
 
 - straight
 - linear
 - spline (default)
 - hidden
 
-![image](https://github.com/ltdrdata/ComfyUI-Manager/assets/1148334/af4b05ab-33b8-4cce-be3b-59765b7ea5a6)
+<div align="center">
+    <img src="https://github.com/ltdrdata/ComfyUI-Manager/assets/1148334/af4b05ab-33b8-4cce-be3b-59765b7ea5a6" alt="Links Render Mode" height="200px">
+    <p>Links Render Mode Options</p>
+</div>
 
-### Colored nodes
+### Colored Nodes
 
-Various color modes have been added to allow automatic coloring of nodes. 
+Apply automatic color coding to nodes using various modes.
 
-#### Positive Negative
+#### Positive/Negative
 
-Colors a node depending on the node title (case-insensitive). 
+Nodes will be colored based on the node title (case-insensitive). This option is compatible with all color modes:
 
-> This option is compatible with all color modes
+- Titles containing "negative" will color the node red.
+- Titles containing "positive" will color the node green.
 
-- "negative" in title = red
-- "positive" in title = green
+<div align="center">
+    <img src="https://github.com/failfa-st/failfast-comfyui-extensions/assets/1148334/a1a366ab-7a7f-4d10-b752-7e313f0c7728" alt="Positive Negative Node Colors" height="200px">
+    <p>Positive and Negative Node Colors</p>
+</div>
 
-![image](https://github.com/failfa-st/failfast-comfyui-extensions/assets/1148334/a1a366ab-7a7f-4d10-b752-7e313f0c7728)
+#### Dynamic Colors
 
-#### Dynamic colors
+Several dynamic coloring modes are available:
 
-- default: Resets to the original behavior (state of last browser reload)
-- plain: Colors all Nodes as grey except for "Note" (yellow)
-- by type: Colors a Node by its type
-- rainbow: Colors each Node in rainbow colors (top-left to bottom-right)
+- default: Resets to the original behavior (state of last browser reload).
+- plain: Colors all Nodes as grey except for "Note" (yellow).
+- by type: Colors a Node by its type.
+- rainbow: Colors each Node in rainbow colors (top-left to bottom-right).
 
-**plain** | **by type** | **rainbow**
+<div align="center">
+    <img src="https://github.com/ltdrdata/ComfyUI-Manager/assets/1148334/0a0b70f2-5ba7-4cca-b61f-8e776e555635" alt="Dynamic Colors Modes" height="200px">
+    <p>Dynamic Colors Modes: plain, by type, rainbow</p>
+</div>
 
-![nodecolor2](https://github.com/ltdrdata/ComfyUI-Manager/assets/1148334/0a0b70f2-5ba7-4cca-b61f-8e776e555635)
+## Context Menu
 
-## Context Menu:
+The context menu offers additional options for nodes, groups, colors, and the canvas:
 
 **Nodes**
 
-- Colors > Custom (only works in Color Mode: "default")
+- Custom color option (only available in "default" Color Mode).
 
-![image](https://github.com/failfa-st/failfast-comfyui-extensions/assets/1148334/f0c4dc53-0e40-480d-a3f9-09b50a3ab56d)
+<div align="center">
+    <img src="https://github.com/failfa-st/failfast-comfyui-extensions/assets/1148334/f0c4dc53-0e40-480d-a3f9-09b50a3ab56d" alt="Node options" height="200px">
+    <p>Node Options</p>
+</div>
 
 **Groups**
 
-- Edit group > Color > Custom
-- Edit group > Color > Color all (colors Group and child Nodes)
-- Edit group > freeze/unfreeze (pins Group and child Nodes)
+- Custom color option.
+- Group color option.
+- Freeze/unfreeze group.
 
-![image](https://github.com/failfa-st/hyv/assets/1148334/7558fcfb-1733-4d78-904b-50891f29fa68)
+<div align="center">
+    <img src="https://github.com/failfa-st/hyv/assets/1148334/7558fcfb-1733-4d78-904b-50891f29fa68" alt="Group options" height="200px">
+    <p>Group Options</p>
+</div>
 
-**Colors**
+**Canvas**
 
-![image](https://github.com/failfa-st/failfast-comfyui-extensions/assets/1148334/c43c2c7b-1eb5-4827-ba10-c53cc1b58100)
+- Arrange nodes (vertical/horizontal).
+- Freeze/unfreeze all nodes.
+- Pin/unpin all nodes.
 
+<div align="center">
+    <img src="https://github.com/failfa-st/failfast-comfyui-extensions/assets/1148334/d45ed248-2a19-4862-bda5-49f9b2703296" alt="Canvas options" height="200px">
+    <p>Canvas Options</p>
+</div>
 
-**Canvas**  
+### Freeze or Unfreeze Group
 
-- Arrange (vertical)
-- Arrange (horizontal)
-- Freeze all
-- Unfreeze all
-- Pin all Nodes
-- Unpin all Nodes
-
-![image](https://github.com/failfa-st/failfast-comfyui-extensions/assets/1148334/d45ed248-2a19-4862-bda5-49f9b2703296)
-
-### Freeze or unfreeze Group
-
-Locks or unlocks a group and all child Nodes. New Nodes will not be affected.
+Lock or unlock a group and all its child Nodes. Note that new Nodes will not be affected.
 
 ### Pin or Unpin all Nodes
 
-Locks or unlocks all nodes on the canvas. New Nodes will not be affected.
+Lock or unlock all nodes on the canvas, regardless of their group.
 
-### Arrange all nodes
+## Single Extensions
 
-Arranges all Nodes in a vertical or horizontal layout.
+In addition to the bundled extension, individual extensions are also available. These include:
 
-**Vertical**
+## Contribution
 
-![image](https://github.com/failfa-st/hyv/assets/1148334/c6553232-52f9-4d61-a954-bc0c4645b333)
+Want to contribute to ComfyUI Extensions? We encourage community input and improvements! Check out our [CONTRIBUTING](CONTRIBUTING.md) guide for more information.
 
-**Horizontal**  
+## License
 
-![image](https://github.com/failfa-st/hyv/assets/1148334/2b519e3f-554b-48f9-9b81-cd1515ec393b)
-
-
-
-## Single extensions
-
-Each extension is compatible to be used separately, so you don't have to load the entire collection
-
-Just copy the file in [`extensions`](/extensions) into the extensions folder of ComfyUI
-
-1. Download the file you need [for example linksRenderMode](https://raw.githubusercontent.com/failfa-st/failfast-comfyui-extensions/main/extensions/linksRenderMode.js)
-2. Copy to `path/to/ComfyUI/web/extensions`
-3. the folder structure should look like this: `path/to/ComfyUI/web/extensions/linksRenderMode.js`
+ComfyUI Extensions is licensed under the AGPL-3.0 License. See [LICENSE](LICENSE) for more information.
