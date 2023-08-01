@@ -1,5 +1,3 @@
-Certainly! Here is your README, incorporating the image changes you requested:
-
 # ComfyUI Extensions by Failfa.st
 
 ComfyUI Extensions by Failfa.st is a robust suite of enhancements, designed to optimize your ComfyUI experience. It
