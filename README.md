@@ -12,22 +12,21 @@ personalization in your ComfyUI environment.
 <!-- toc -->
 
 - [Installation](#installation)
-  - [Clone Repository](#clone-repository)
-  - [Download Manually](#download-manually)
+  * [Clone Repository](#clone-repository)
+  * [Download Manually](#download-manually)
 - [Update](#update)
 - [Settings](#settings)
-  - [Options](#options)
-  - [Links Render Mode](#links-render-mode)
-  - [Colored Nodes](#colored-nodes)
-    - [Positive/Negative](#positivenegative)
-    - [Dynamic Colors](#dynamic-colors)
+  * [Options](#options)
+  * [Links Render Mode](#links-render-mode)
+  * [Colored Nodes](#colored-nodes)
+    + [Positive/Negative](#positivenegative)
+    + [Dynamic Colors](#dynamic-colors)
 - [Context Menu](#context-menu)
-  - [Freeze or Unfreeze Group](#freeze-or-unfreeze-group)
-  - [Pin or Unpin all Nodes](#pin-or-unpin-all-nodes)
-  - [Arranging all Nodes](#arranging-all-nodes)
-- [Single Extensions](#single-extensions)
+  * [Freeze or Unfreeze Group](#freeze-or-unfreeze-group)
+  * [Pin or Unpin all Nodes](#pin-or-unpin-all-nodes)
+  * [Arranging all Nodes](#arranging-all-nodes)
+- [Single Extensions Usage](#single-extensions-usage)
 - [Contribution](#contribution)
-- [License](#license)
 
 <!-- tocstop -->
 
