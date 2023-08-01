@@ -405,12 +405,9 @@ app.registerExtension({
                       `Comfy.Settings.${colorsName}-posneg`,
                       event.target.checked.toString(),
                     );
-                    const value = +(
-                      window.localStorage.getItem(
-                        `Comfy.Settings.${colorsName}`,
-                      ) ?? "0"
-                    );
-                    setColorMode(value, app);
+                    if (event.target.checked) {
+                      colorPositiveNegative(app);
+                    }
                   },
                 }),
               ],

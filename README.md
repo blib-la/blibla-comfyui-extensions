@@ -38,7 +38,7 @@ Two methods are available for installation:
 ### Clone Repository
 
 ```shell
-cd your-path/ComfyUI/web/extensions
+cd path/to/your/ComfyUI/custom_nodes
 git clone git@github.com:failfa-st/failfast-comfyui-extensions.git
 ```
 
@@ -46,21 +46,18 @@ git clone git@github.com:failfa-st/failfast-comfyui-extensions.git
 
 1. Download the project archive from [here](https://github.com/failfa-st/failfast-comfyui-extensions/archive/refs/heads/main.zip).
 2. Extract the downloaded zip file.
-3. Move the extracted files to `your-path/ComfyUI/web/extensions`.
+3. Move the extracted files to `your-path/ComfyUI/custom_nodes`.
+4. Restart ComfyUI
 
-The folder structure should resemble: `your-path/ComfyUI/web/extensions/failfast-comfyui-extensions`.
+The folder structure should resemble: `your-path/ComfyUI/custom_nodes/failfast-comfyui-extensions`.
 
-<div align="center">
-    <img src="https://github.com/failfa-st/failfast-comfyui-extensions/assets/1148334/6d08fd63-5309-44f8-934a-e120a48c0798" alt="Folder structure example">
-    <p>Example of Correct Folder Structure</p>
-</div>
 
 ## Update
 
 To update the extensions, pull the latest changes from the repository:
 
 ```shell
-cd your-path/ComfyUI/web/extensions/failfast-comfyui-extensions
+cd path/to/your/ComfyUI/custom_nodes/failfast-comfyui-extensions
 git pull
 ```
 
@@ -190,8 +187,8 @@ Each extension is fully capable of functioning individually. This allows you to 
 Simply download the desired file from the [`extensions`](extensions) directory and place it in the extensions folder of ComfyUI.
 
 1. Download the required file for example, [linksRenderMode](extensions/linksRenderMode.js).
-2. Transfer the file to `path/to/ComfyUI/web/extensions`.
-3. The folder structure should appear as: `path/to/ComfyUI/web/extensions/linksRenderMode.js`.
+2. Transfer the file to `path/to/your/ComfyUI/web/extensions`.
+3. The folder structure should appear as: `path/to/your/ComfyUI/web/extensions/linksRenderMode.js`.
 
 ## Contribution
 
