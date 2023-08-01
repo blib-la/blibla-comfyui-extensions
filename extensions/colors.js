@@ -298,6 +298,7 @@ app.registerExtension({
               "Custom",
               $el("input", {
                 type: "color",
+                value: node.bgcolor,
                 style: {
                   position: "absolute",
                   right: "200%",
@@ -311,9 +312,9 @@ app.registerExtension({
                   node.setDirtyCanvas(true, true);
                 },
               }),
-            ]
+            ],
           ),
-        ])
+        ]),
       );
       if (isGroup) {
         menuRoot.append(
@@ -333,6 +334,7 @@ app.registerExtension({
                 "Color all",
                 $el("input", {
                   type: "color",
+                  value: node.bgcolor,
                   style: {
                     position: "absolute",
                     right: "200%",
@@ -351,9 +353,9 @@ app.registerExtension({
                     node.setDirtyCanvas(true, true);
                   },
                 }),
-              ]
+              ],
             ),
-          ])
+          ]),
         );
       }
       return response;
@@ -385,7 +387,7 @@ app.registerExtension({
                   value: index,
                   selected: index === +value,
                 });
-              })
+              }),
             ),
             $el(
               "label",
@@ -398,19 +400,19 @@ app.registerExtension({
                   type: "checkbox",
                   checked:
                     window.localStorage.getItem(
-                      `Comfy.Settings.${colorsName}-posneg`
+                      `Comfy.Settings.${colorsName}-posneg`,
                     ) === "true",
                   onchange: (event) => {
                     window.localStorage.setItem(
                       `Comfy.Settings.${colorsName}-posneg`,
-                      event.target.checked.toString()
+                      event.target.checked.toString(),
                     );
                     if (event.target.checked) {
                       colorPositiveNegative(app);
                     }
                   },
                 }),
-              ]
+              ],
             ),
           ]),
         ]);
