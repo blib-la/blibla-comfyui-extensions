@@ -112,16 +112,19 @@ Colors a node depending on the node title (case-insensitive).
 
 - Colors > Custom (only works in Color Mode: "default")
 
+![image](https://github.com/failfa-st/failfast-comfyui-extensions/assets/1148334/f0c4dc53-0e40-480d-a3f9-09b50a3ab56d)
+
 **Groups**
 
 - Edit group > Color > Custom
-- Edit group > freeze/unfreeze (pins group and child nodes)
+- Edit group > Color > Color all (colors Group and child Nodes)
+- Edit group > freeze/unfreeze (pins Group and child Nodes)
 
 ![image](https://github.com/failfa-st/hyv/assets/1148334/7558fcfb-1733-4d78-904b-50891f29fa68)
 
-**Screenshot from Nodes (similar for Groups)**  
+**Colors**
 
-![image](https://github.com/failfa-st/failfast-comfyui-extensions/assets/1148334/657d1a6c-d4d9-4091-9a35-16fa9ca50489)
+![image](https://github.com/failfa-st/failfast-comfyui-extensions/assets/1148334/c43c2c7b-1eb5-4827-ba10-c53cc1b58100)
 
 
 **Canvas**  

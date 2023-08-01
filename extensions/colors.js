@@ -279,6 +279,8 @@ app.registerExtension({
     LGraphCanvas.onMenuNodeColors = function (value, options, e, menu, node) {
       const response = onMenuNodeColors.apply(this, arguments);
       const menuRoot = menu.current_submenu.root;
+      const isGroup = node instanceof LGraphGroup;
+
       menuRoot.append(
         $el("div.litemenu-entry.submenu", [
           $el(
@@ -313,6 +315,47 @@ app.registerExtension({
           ),
         ]),
       );
+      if (isGroup) {
+        menuRoot.append(
+          $el("div.litemenu-entry.submenu", [
+            $el(
+              "label",
+              {
+                style: {
+                  position: "relative",
+                  overflow: "hidden",
+                  display: "block",
+                  paddingLeft: "4px",
+                  borderLeft: "8px solid #222",
+                },
+              },
+              [
+                "Color all",
+                $el("input", {
+                  type: "color",
+                  style: {
+                    position: "absolute",
+                    right: "200%",
+                  },
+                  oninput(event) {
+                    node.recomputeInsideNodes();
+                    node.bgcolor = event.target.value;
+                    node.color = shadeHexColor(node.bgcolor);
+                    node._nodes.forEach((node_) => {
+                      node_.bgcolor = node.bgcolor;
+                      node_.color = node.color;
+                    });
+                    // TODO: check if we can adjust this
+                    // node.title_color = getContrastColor(node.bgcolor);
+
+                    node.setDirtyCanvas(true, true);
+                  },
+                }),
+              ],
+            ),
+          ]),
+        );
+      }
       return response;
     };
     app.ui.settings.addSetting({
