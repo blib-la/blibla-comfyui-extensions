@@ -1,3 +1,11 @@
+## [1.5.1](https://github.com/failfa-st/failfast-comfyui-extensions/compare/v1.5.0...v1.5.1) (2023-08-01)
+
+
+### Bug Fixes
+
+* **colors:** set default value of colorpicker ([c0e70fd](https://github.com/failfa-st/failfast-comfyui-extensions/commit/c0e70fd1ad8bf7b2e73450a276ab8ebd3277e86a))
+
+
 # [1.5.0](https://github.com/failfa-st/failfast-comfyui-extensions/compare/v1.4.0...v1.5.0) (2023-08-01)
 
 
