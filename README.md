@@ -137,6 +137,7 @@ The context menu offers additional options for nodes, groups, colors, and the ca
 
 - Custom color option (only available in "default" Color Mode).
 - Show title on Reroute node
+- Render Reroute as dot
 
 ![Screenshot 2023-08-01 164137](
 
@@ -147,9 +148,16 @@ The context menu offers additional options for nodes, groups, colors, and the ca
 </div>
 
 <div align="center">
-    <img src="https://github.com/failfa-st/failfast-comfyui-extensions/assets/1148334/e40ea33d-5a44-4859-b050-ed7a13057536" alt="reroute Node options" height="300px">
+    <img src="https://github.com/failfa-st/failfast-comfyui-extensions/assets/1148334/e40ea33d-5a44-4859-b050-ed7a13057536" alt="reroute Node options" width="400px">
     <p>Reroute show/hide Title</p>
 </div>
+
+<div align="center">
+    <img src="https://github.com/failfa-st/failfast-comfyui-extensions/assets/1148334/f7459943-0a92-41ef-bb19-86cb1b39fd54" alt="reroute Node as dot" height="300px">
+    <p>Reroute as dot</p>
+</div>
+
+
 
 **Groups**
 
