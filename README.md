@@ -21,9 +21,18 @@ personalization in your ComfyUI environment.
     + [Positive/Negative](#positivenegative)
     + [Dynamic Colors](#dynamic-colors)
 - [Context Menu](#context-menu)
-  * [Freeze or Unfreeze Group](#freeze-or-unfreeze-group)
-  * [Pin or Unpin all Nodes](#pin-or-unpin-all-nodes)
-  * [Arranging all Nodes](#arranging-all-nodes)
+  * [Nodes](#nodes)
+    + [Custom Color Option (only available in "default" Color Mode)](#custom-color-option-only-available-in-default-color-mode)
+    + [Show Title on Reroute Node](#show-title-on-reroute-node)
+    + [Render Reroute as Dot](#render-reroute-as-dot)
+    + [Copy Images](#copy-images)
+  * [Groups](#groups)
+    + [Group Color Option](#group-color-option)
+    + [Freeze/Unfreeze Group](#freezeunfreeze-group)
+  * [Canvas](#canvas)
+    + [Pin or Unpin all Nodes](#pin-or-unpin-all-nodes)
+    + [Freeze or unfreeze all Groups and Nodes](#freeze-or-unfreeze-all-groups-and-nodes)
+    + [Arranging all Nodes](#arranging-all-nodes)
 - [Single Extensions Usage](#single-extensions-usage)
 - [Contribution](#contribution)
 
@@ -143,66 +152,71 @@ Several dynamic coloring modes are available:
 
 The context menu offers additional options for nodes, groups, colors, and the canvas:
 
-**Nodes**
+### Nodes
 
-- Custom color option (only available in "default" Color Mode).
-- Show title on Reroute node
-- Render Reroute as dot
-- Copy Images
-
+#### Custom Color Option (only available in "default" Color Mode)
 
 <div align="center">
     <img src="https://github.com/failfa-st/failfast-comfyui-extensions/assets/1148334/f0c4dc53-0e40-480d-a3f9-09b50a3ab56d" alt="Node color options" height="300px">
     <p>Node Color Options</p>
 </div>
 
+#### Show Title on Reroute Node
+
 <div align="center">
     <img src="https://github.com/failfa-st/failfast-comfyui-extensions/assets/1148334/e40ea33d-5a44-4859-b050-ed7a13057536" alt="reroute Node options" width="400px">
     <p>Reroute show/hide Title</p>
 </div>
+
+#### Render Reroute as Dot
 
 <div align="center">
     <img src="https://github.com/failfa-st/failfast-comfyui-extensions/assets/1148334/c02818a1-3c87-4d15-8e91-2328b08d46f3" alt="reroute Node as dot" height="300px">
     <p>Reroute as dot</p>
 </div>
 
+#### Copy Images
+
 <div align="center">
     <img src="https://github.com/failfa-st/failfast-comfyui-extensions/assets/1148334/f41b4aff-9677-4faf-85cb-86ce497d6240" alt="Copy images" >
     <p>Copy Image</p>
 </div>
 
+### Groups
 
-**Groups**
+#### Group Color Option
 
-- Custom color option.
-- Group color option.
-- Freeze/unfreeze group.
-
-<div align="center">
-    <img src="https://github.com/failfa-st/hyv/assets/1148334/7558fcfb-1733-4d78-904b-50891f29fa68" alt="Group options" height="300px">
-    <p>Group Options</p>
-</div>
-
-**Canvas**
-
-- Arrange nodes (vertical/horizontal).
-- Freeze/unfreeze all nodes.
-- Pin/unpin all nodes.
+You can color a group with a custom color and even color a group including all its child Nodes
 
 <div align="center">
-    <img src="https://github.com/failfa-st/failfast-comfyui-extensions/assets/1148334/d45ed248-2a19-4862-bda5-49f9b2703296" alt="Canvas options" height="300px">
-    <p>Canvas Options</p>
+    <img src="https://github.com/failfa-st/failfast-comfyui-extensions/assets/1148334/f3788347-3fe3-4959-b14c-5b9db96e8f41" alt="Group color options" height="300px">
+    <p>Group color Options</p>
 </div>
 
-### Freeze or Unfreeze Group
+
+#### Freeze/Unfreeze Group
 
 Lock or unlock a group and all its child Nodes. Note that new Nodes will not be affected.
 
-### Pin or Unpin all Nodes
+<div align="center">
+    <img src="https://github.com/failfa-st/hyv/assets/1148334/7558fcfb-1733-4d78-904b-50891f29fa68" alt="Group freeze" height="300px">
+    <p>Group freeze/unfreeze</p>
+</div>
+
+
+
+### Canvas 
+
+#### Pin or Unpin all Nodes
 
 Lock or unlock all nodes on the canvas, regardless of their group.
 
-### Arranging all Nodes
+
+#### Freeze or unfreeze all Groups and Nodes
+
+Lock or unlock all groups and all Nodes
+
+#### Arranging all Nodes
 
 You can arrange all Nodes in either vertical or horizontal layout.
 
