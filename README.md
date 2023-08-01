@@ -128,10 +128,12 @@ Colors a node depending on the node title (case-insensitive).
 
 - Arrange (vertical)
 - Arrange (horizontal)
+- Freeze all
+- Unfreeze all
 - Pin all Nodes
 - Unpin all Nodes
 
-![image](https://github.com/failfa-st/hyv/assets/1148334/4ba7027e-d8ab-420c-911a-0a02987d3ff9)
+![image](https://github.com/failfa-st/failfast-comfyui-extensions/assets/1148334/d45ed248-2a19-4862-bda5-49f9b2703296)
 
 ### Freeze or unfreeze Group
 
