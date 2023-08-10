@@ -15,6 +15,7 @@ personalization in your ComfyUI environment.
 ### If you have an idea for a new extension, you can open a [Feature Request](https://github.com/failfa-st/failfast-comfyui-extensions/issues/new?assignees=&labels=enhancement&projects=&template=feature_request.md&title=)
 
 ## Table of Contents
+
 <!-- toc -->
 
 - [Installation](#installation)
