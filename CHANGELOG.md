@@ -1,3 +1,12 @@
+## [1.6.1](https://github.com/failfa-st/failfast-comfyui-extensions/compare/v1.6.0...v1.6.1) (2023-08-10)
+
+
+### Features
+
+* remove links render mode ([e0a4343](https://github.com/failfa-st/failfast-comfyui-extensions/commit/e0a4343965dec9c3d283d1c9cd281a85f95e1063))
+
+
+
 ## [1.6.0](https://github.com/failfa-st/failfast-comfyui-extensions/compare/v1.6.0...v1.5.1) (2023-08-10)
 
 
