@@ -24,7 +24,6 @@ personalization in your ComfyUI environment.
 - [Update](#update)
 - [Settings](#settings)
   * [Options](#options)
-  * [Links Render Mode](#links-render-mode)
   * [Colored Nodes](#colored-nodes)
     + [Positive/Negative](#positivenegative)
     + [Dynamic Colors](#dynamic-colors)
@@ -103,7 +102,6 @@ Different customization options available with their default settings and descri
 
 | Name               | Default   | Description                                                                         |
 | ------------------ | --------- | ----------------------------------------------------------------------------------- |
-| Links Render Mode  | `spline`  | Sets the render mode of connector lines (options: straight, angled, curved, hidden) |
 | Force Snap to Grid | `false`   | Forces nodes to snap to the grid                                                    |
 | Force Box Shape    | `false`   | Removes round corners from all nodes                                                |
 | Render Shadows     | `true`    | Toggles visibility of shadows                                                       |
@@ -111,20 +109,6 @@ Different customization options available with their default settings and descri
 | Font Size          | `10`      | Sets the font size of textareas                                                     |
 | Colored Nodes      | `default` | Applies dynamic coloring to nodes                                                   |
 | Batch Resize       | `false`   | Resizes multiple selected nodes to the same size synchronously                      |
-
-### Links Render Mode
-
-Choose from four rendering modes for connector lines:
-
-- straight
-- linear
-- spline (default)
-- hidden
-
-<div align="center">
-    <img src="https://github.com/ltdrdata/ComfyUI-Manager/assets/1148334/af4b05ab-33b8-4cce-be3b-59765b7ea5a6" alt="Links Render Mode" height="300px">
-    <p>Links Render Mode Options</p>
-</div>
 
 ### Colored Nodes
 
@@ -249,9 +233,9 @@ Each extension is fully capable of functioning individually. This allows you to 
 
 Simply download the desired file from the [`extensions`](extensions) directory and place it in the extensions folder of ComfyUI.
 
-1. Download the required file for example, [linksRenderMode](extensions/linksRenderMode.js).
+1. Download the required file for example, [reroute](extensions/reroute.js).
 2. Transfer the file to `path/to/your/ComfyUI/web/extensions`.
-3. The folder structure should appear as: `path/to/your/ComfyUI/web/extensions/linksRenderMode.js`.
+3. The folder structure should appear as: `path/to/your/ComfyUI/web/extensions/reroute.js`.
 
 ## Contribution
 
