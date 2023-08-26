@@ -1,3 +1,12 @@
+# [1.7.0](https://github.com/failfa-st/failfast-comfyui-extensions/compare/v1.6.1...v1.7.0) (2023-08-26)
+
+
+### Features
+
+* add hidden to global LinkRenderModes ([#11](https://github.com/failfa-st/failfast-comfyui-extensions/issues/11)) ([18e74b6](https://github.com/failfa-st/failfast-comfyui-extensions/commit/18e74b627caeb5bafa0fbeb4264e2c092c73f59a))
+
+
+
 ## [1.6.1](https://github.com/failfa-st/failfast-comfyui-extensions/compare/v1.6.0...v1.6.1) (2023-08-10)
 
 
