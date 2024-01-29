@@ -1,10 +1,10 @@
-# ComfyUI Extensions by Failfa.st
+# ComfyUI Extensions by Blibla
 
 ![Screenshot 2023-08-02 004936](https://github.com/failfa-st/failfast-comfyui-extensions/assets/1148334/d1530160-3c77-4aac-952f-7b9f2cf37b8f)
 
 [![Discord](https://img.shields.io/discord/1091306623819059300?color=7289da&label=Discord&logo=discord&logoColor=fff&style=for-the-badge)](https://discord.com/invite/m3TBB9XEkb)
 
-ComfyUI Extensions by Failfa.st is a robust suite of enhancements, designed to optimize your ComfyUI experience. It
+ComfyUI Extensions by Blibla is a robust suite of enhancements, designed to optimize your ComfyUI experience. It
 provides a range of features, including customizable render modes, dynamic node coloring, and versatile management
 tools. Whether for individual use or team collaboration, our extensions aim to enhance productivity, readability, and
 personalization in your ComfyUI environment.
