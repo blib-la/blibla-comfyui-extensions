@@ -28,6 +28,8 @@ personalization in your ComfyUI environment.
   * [Colored Nodes](#colored-nodes)
     + [Positive/Negative](#positivenegative)
     + [Dynamic Colors](#dynamic-colors)
+- [Main Menu](#main-menu)
+  * [Unload Models](#unload-models)
 - [Context Menu](#context-menu)
   * [Nodes](#nodes)
     + [Custom Color Option (only available in "default" Color Mode)](#custom-color-option-only-available-in-default-color-mode)
@@ -109,7 +111,6 @@ Different customization options available with their default settings and descri
 | Connections Width  | `3`       | Sets the width of connector lines                                                   |
 | Font Size          | `10`      | Sets the font size of textareas                                                     |
 | Colored Nodes      | `default` | Applies dynamic coloring to nodes                                                   |
-| Batch Resize       | `false`   | Resizes multiple selected nodes to the same size synchronously                      |
 
 ### Colored Nodes
 
@@ -141,6 +142,23 @@ Several dynamic coloring modes are available:
     <p>Dynamic Colors Modes: plain, by type, rainbow</p>
 </div>
 
+## Main Menu
+
+### Unload Models
+
+Free up GPU memory by unloading the models
+
+<div align="center">
+    <img src="https://github.com/blib-la/blibla-comfyui-extensions/assets/1148334/a81f3689-0291-4f2d-8ce5-3a9b4a8a2e76" alt="Unload Models Button" width="400px">
+    <p>A new Button is available</p>
+</div>
+
+<div align="center">
+    <img src="https://github.com/blib-la/blibla-comfyui-extensions/assets/1148334/e8d848d5-c157-4574-8fac-7d30052451d0" alt="GPU freed" width="400px">
+    <p>GPU Memory was freed</p>
+</div>
+
+
 ## Context Menu
 
 The context menu offers additional options for nodes, groups, colors, and the canvas:
@@ -160,6 +178,7 @@ The context menu offers additional options for nodes, groups, colors, and the ca
     <img src="https://github.com/failfa-st/failfast-comfyui-extensions/assets/1148334/e40ea33d-5a44-4859-b050-ed7a13057536" alt="reroute Node options" width="400px">
     <p>Reroute show/hide Title</p>
 </div>
+
 
 #### Render Reroute as Dot
 
