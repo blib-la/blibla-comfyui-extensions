@@ -1,5 +1,9 @@
 # ComfyUI Extensions by Blibla
 
+Chack out Captain: The AI Platform
+- https://github.com/blib-la/captain
+- https://get-captain.com
+
 ![Screenshot 2023-08-02 004936](https://github.com/failfa-st/failfast-comfyui-extensions/assets/1148334/d1530160-3c77-4aac-952f-7b9f2cf37b8f)
 
 [![Discord](https://img.shields.io/discord/1091306623819059300?color=7289da&label=Discord&logo=discord&logoColor=fff&style=for-the-badge)](https://discord.com/invite/m3TBB9XEkb)
