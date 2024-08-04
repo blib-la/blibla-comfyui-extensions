@@ -277,43 +277,150 @@ app.registerExtension({
       const menuRoot = menu.current_submenu.root;
       const isGroup = node instanceof LGraphGroup;
 
-      menuRoot.append(
-        $el("div.litemenu-entry.submenu", [
-          $el(
-            "label",
-            {
-              style: {
-                position: "relative",
-                overflow: "hidden",
-                display: "block",
-                paddingLeft: "4px",
-                borderLeft: "8px solid #222",
-              },
-            },
-            [
-              "Custom",
-              $el("input", {
-                type: "color",
-                value: node.bgcolor,
-                style: {
-                  position: "absolute",
-                  right: "200%",
-                },
-                oninput(event) {
-                  node.bgcolor = event.target.value;
-                  node.color = shadeHexColor(node.bgcolor);
-                  // TODO: check if we can adjust this
-                  // node.title_color = getContrastColor(node.bgcolor);
+			if (!isGroup) {
+				menuRoot.append(
+					$el("div.litemenu-entry.submenu", [
+						$el(
+							"label",
+							{
+								style: {
+									position: "relative",
+									overflow: "hidden",
+									display: "block",
+									paddingLeft: "4px",
+									borderLeft: "8px solid #222",
+								},
+							},
+							[
+								"Custom Title",
+								$el("input", {
+									type: "color",
+									value: node.bgcolor,
+									style: {
+										position: "absolute",
+										right: "200%",
+									},
+									oninput(event) {
+										// node.bgcolor = event.target.value;
+										node.color = shadeHexColor(event.target.value);
+										// TODO: check if we can adjust this
+										// node.title_color = getContrastColor(node.bgcolor);
 
-                  node.setDirtyCanvas(true, true);
-                },
-              }),
-            ],
-          ),
-        ]),
-      );
+										node.setDirtyCanvas(true, true);
+									},
+								}),
+							],
+						),
+					]),
+				);
+				menuRoot.append(
+					$el("div.litemenu-entry.submenu", [
+						$el(
+							"label",
+							{
+								style: {
+									position: "relative",
+									overflow: "hidden",
+									display: "block",
+									paddingLeft: "4px",
+									borderLeft: "8px solid #222",
+								},
+							},
+							[
+								"Custom BG",
+								$el("input", {
+									type: "color",
+									value: node.bgcolor,
+									style: {
+										position: "absolute",
+										right: "200%",
+									},
+									oninput(event) {
+										node.bgcolor = event.target.value;
+										// node.color = shadeHexColor(node.bgcolor);
+										// TODO: check if we can adjust this
+										// node.title_color = getContrastColor(node.bgcolor);
+
+										node.setDirtyCanvas(true, true);
+									},
+								}),
+							],
+						),
+					]),
+				);
+				menuRoot.append(
+					$el("div.litemenu-entry.submenu", [
+						$el(
+							"label",
+							{
+								style: {
+									position: "relative",
+									overflow: "hidden",
+									display: "block",
+									paddingLeft: "4px",
+									borderLeft: "8px solid #222",
+								},
+							},
+							[
+								"Custom All",
+								$el("input", {
+									type: "color",
+									value: node.bgcolor,
+									style: {
+										position: "absolute",
+										right: "200%",
+									},
+									oninput(event) {
+										node.bgcolor = event.target.value;
+										node.color = shadeHexColor(node.bgcolor);
+										// TODO: check if we can adjust this
+										// node.title_color = getContrastColor(node.bgcolor);
+
+										node.setDirtyCanvas(true, true);
+									},
+								}),
+							],
+						),
+					]),
+				);
+			}
       if (isGroup) {
         menuRoot.append(
+					$el("div.litemenu-entry.submenu", [
+						$el(
+							"label",
+							{
+								style: {
+									position: "relative",
+									overflow: "hidden",
+									display: "block",
+									paddingLeft: "4px",
+									borderLeft: "8px solid #222",
+								},
+							},
+							[
+								"Color Group",
+								$el("input", {
+									type: "color",
+									value: node.bgcolor,
+									style: {
+										position: "absolute",
+										right: "200%",
+									},
+									oninput(event) {
+										node.bgcolor = event.target.value;
+										node.color = shadeHexColor(node.bgcolor);
+										// TODO: check if we can adjust this
+										// node.title_color = getContrastColor(node.bgcolor);
+
+										node.setDirtyCanvas(true, true);
+									},
+								}),
+							],
+						),
+					]),
+				);
+				menuRoot.append(
           $el("div.litemenu-entry.submenu", [
             $el(
               "label",
@@ -327,7 +434,87 @@ app.registerExtension({
                 },
               },
               [
-                "Color all",
+                "Color All Title",
+                $el("input", {
+                  type: "color",
+                  value: node.bgcolor,
+                  style: {
+                    position: "absolute",
+                    right: "200%",
+                  },
+                  oninput(event) {
+                    node.recomputeInsideNodes();
+                    // node.bgcolor = event.target.value;
+                    node.color = shadeHexColor(event.target.value);
+                    node._nodes.forEach((node_) => {
+                      // node_.bgcolor = node.bgcolor;
+                      node_.color = node.color;
+                    });
+                    // TODO: check if we can adjust this
+                    // node.title_color = getContrastColor(node.bgcolor);
+
+                    node.setDirtyCanvas(true, true);
+                  },
+                }),
+              ],
+            ),
+          ]),
+        );
+				menuRoot.append(
+          $el("div.litemenu-entry.submenu", [
+            $el(
+              "label",
+              {
+                style: {
+                  position: "relative",
+                  overflow: "hidden",
+                  display: "block",
+                  paddingLeft: "4px",
+                  borderLeft: "8px solid #222",
+                },
+              },
+              [
+                "Color All BG",
+                $el("input", {
+                  type: "color",
+                  value: node.bgcolor,
+                  style: {
+                    position: "absolute",
+                    right: "200%",
+                  },
+                  oninput(event) {
+                    node.recomputeInsideNodes();
+                    node.bgcolor = event.target.value;
+                    // node.color = shadeHexColor(node.bgcolor);
+                    node._nodes.forEach((node_) => {
+                      node_.bgcolor = node.bgcolor;
+                      // node_.color = node.color;
+                    });
+                    // TODO: check if we can adjust this
+                    // node.title_color = getContrastColor(node.bgcolor);
+
+                    node.setDirtyCanvas(true, true);
+                  },
+                }),
+              ],
+            ),
+          ]),
+        );
+				menuRoot.append(
+          $el("div.litemenu-entry.submenu", [
+            $el(
+              "label",
+              {
+                style: {
+                  position: "relative",
+                  overflow: "hidden",
+                  display: "block",
+                  paddingLeft: "4px",
+                  borderLeft: "8px solid #222",
+                },
+              },
+              [
+                "Color All",
                 $el("input", {
                   type: "color",
                   value: node.bgcolor,
