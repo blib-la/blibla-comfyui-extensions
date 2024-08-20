@@ -1,0 +1,14 @@
+[project]
+name = "blibla-comfyui-extensions"
+description = ""
+version = "1.0.0"
+license = "LICENSE"
+
+[project.urls]
+Repository = "https://github.com/blib-la/blibla-comfyui-extensions"
+#  Used by Comfy Registry https://comfyregistry.org
+
+[tool.comfy]
+PublisherId = ""
+DisplayName = "blibla-comfyui-extensions"
+Icon = ""
