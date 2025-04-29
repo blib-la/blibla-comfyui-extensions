@@ -1,3 +1,4 @@
+# DEPRECATED - THIS PROJECT IS NO LONGER MAINTAINED AND WILL NOT RECEIVE ANY UPDATES
 # ComfyUI Extensions by Blibla
 
 Chack out Captain: The AI Platform
